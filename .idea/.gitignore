@@ -1,0 +1,15 @@
+echo "# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Maven
+target/
+
+# Compiled class files
+*.class
+
+# Log files
+*.log" > .gitignore

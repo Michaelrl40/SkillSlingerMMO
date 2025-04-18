@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="6cb5b92a-dbf8-4c77-890e-1361fb06c1d3" name="Changes" comment="!.21 update">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <excluded-from-favorite>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$" source="master" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </excluded-from-favorite>
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="Correct-branch" />
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;Michaelrl40&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Michaelrl40/SkillSlingerSMP.git",
+    "accountId": "ea4610e8-d7ca-47ec-877a-33b12365b1e9"
+  }
+}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2pAkZdVOBOtQi0oIVJI5fc1k4zd" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Maven.skillslinger [clean].executor": "Run",
+    "Maven.skillslinger [compile].executor": "Run",
+    "Maven.skillslinger [install].executor": "Run",
+    "Maven.skillslinger [package].executor": "Run",
+    "Maven.skillslinger [test].executor": "Run",
+    "Maven.skillslinger [verify].executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/Micha/OneDrive/Desktop/SkillSlinger/src/main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Micha\OneDrive\Desktop\SkillSlinger\libs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Micha\OneDrive\Desktop\SkillSlinger\libs" />
+      <recent name="C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\npc\npcskills" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.michael.mmorpg.handlers" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.michael.mmorpg.skills.mage" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="mcdev-temp-root" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23726.103" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23726.103" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration>C:\Users\Micha\AppData\Roaming\Subversion</configuration>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="6cb5b92a-dbf8-4c77-890e-1361fb06c1d3" name="Changes" comment="" />
+      <created>1732216325260</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1732216325260</updated>
+      <workItem from="1732216326303" duration="58161000" />
+      <workItem from="1732859421387" duration="198000" />
+      <workItem from="1732859750746" duration="29726000" />
+      <workItem from="1732947628691" duration="63940000" />
+      <workItem from="1733541309502" duration="155099000" />
+      <workItem from="1734623007141" duration="111903000" />
+      <workItem from="1735571585940" duration="119883000" />
+      <workItem from="1736143670790" duration="195618000" />
+      <workItem from="1737342489898" duration="7336000" />
+      <workItem from="1737427635464" duration="42685000" />
+      <workItem from="1737647377033" duration="27559000" />
+      <workItem from="1737821664781" duration="82281000" />
+      <workItem from="1739244935745" duration="61989000" />
+      <workItem from="1739970991275" duration="95450000" />
+      <workItem from="1741124286518" duration="203710000" />
+      <workItem from="1743383405358" duration="137000" />
+      <workItem from="1743383555844" duration="46789000" />
+      <workItem from="1743901097147" duration="31419000" />
+      <workItem from="1744331398416" duration="66854000" />
+      <workItem from="1745008532063" duration="650000" />
+      <workItem from="1745009324581" duration="180000" />
+      <workItem from="1745009555311" duration="183000" />
+      <workItem from="1745009772999" duration="13000" />
+      <workItem from="1745009794384" duration="39000" />
+      <workItem from="1745009839540" duration="32000" />
+      <workItem from="1745009957871" duration="14000" />
+      <workItem from="1745010277986" duration="157000" />
+      <workItem from="1745014292756" duration="646000" />
+      <workItem from="1745014950465" duration="142000" />
+      <workItem from="1745015101762" duration="1565000" />
+    </task>
+    <task id="LOCAL-00001" summary="New updates">
+      <option name="closed" value="true" />
+      <created>1735869627625</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1735869627625</updated>
+    </task>
+    <task id="LOCAL-00002" summary="few updates to unneed code.">
+      <option name="closed" value="true" />
+      <created>1735879077001</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1735879077001</updated>
+    </task>
+    <task id="LOCAL-00003" summary="few updates to unneed code.">
+      <option name="closed" value="true" />
+      <created>1735879370545</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1735879370545</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Fixed">
+      <option name="closed" value="true" />
+      <created>1735879813067</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1735879813067</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Fixed">
+      <option name="closed" value="true" />
+      <created>1735885314710</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1735885314710</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Fixed">
+      <option name="closed" value="true" />
+      <created>1735885816196</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1735885816196</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fixed">
+      <option name="closed" value="true" />
+      <created>1736027175994</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1736027175994</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Fixed">
+      <option name="closed" value="true" />
+      <created>1736219157449</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1736219157449</updated>
+    </task>
+    <task id="LOCAL-00009" summary="New classes and Economy systems. /coins and buidling chest shops!&#10;&#10;[shop]&#10;item&#10;buy/sell (if you want a buy or sell shop)&#10;50 (whatever your price is)">
+      <option name="closed" value="true" />
+      <created>1736557956962</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1736557956962</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Bunch of changes almost done with the plugin, just have to fix bugs and misses make ui and then the combat portion is done.">
+      <option name="closed" value="true" />
+      <created>1737771009697</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1737771009697</updated>
+    </task>
+    <task id="LOCAL-00011" summary="!.21 update">
+      <option name="closed" value="true" />
+      <created>1737851010960</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1737851010960</updated>
+    </task>
+    <task id="LOCAL-00012" summary="!.21 update">
+      <option name="closed" value="true" />
+      <created>1745014442063</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1745014442063</updated>
+    </task>
+    <task id="LOCAL-00013" summary="!.21 update">
+      <option name="closed" value="true" />
+      <created>1745016187365</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1745016187365</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ID_ORDER">
+      <list>
+        <option value="Default.Root" />
+        <option value="Default.Author" />
+        <option value="Default.Date" />
+        <option value="Default.Subject" />
+        <option value="GitHub.CommitStatus" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+    <MESSAGE value="New updates" />
+    <MESSAGE value="few updates to unneed code." />
+    <MESSAGE value="Fixed" />
+    <MESSAGE value="New classes and Economy systems. /coins and buidling chest shops!&#10;&#10;[shop]&#10;item&#10;buy/sell (if you want a buy or sell shop)&#10;50 (whatever your price is)" />
+    <MESSAGE value="Bunch of changes almost done with the plugin, just have to fix bugs and misses make ui and then the combat portion is done." />
+    <MESSAGE value="!.21 update" />
+    <option name="LAST_COMMIT_MESSAGE" value="!.21 update" />
+  </component>
+</project>

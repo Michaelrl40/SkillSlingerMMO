@@ -1,0 +1,134 @@
+name: Skillslinger
+version: 1.0-SNAPSHOT
+main: com.michael.mmorpg.MinecraftMMORPG
+api-version: 1.21.4
+description: MMORPG plugin with class system
+depend: [ProtocolLib, LibsDisguises, ItemsAdder, WorldGuard, PlaceholderAPI]
+softdepend: [DiscordSRV, Parties]
+
+permissions:
+  skillslinger.coins.admin:
+    description: Allows access to administrative coin commands
+    default: op
+  skillslinger.shop.create:
+    description: Allows creation of shops
+    default: op
+  skillslinger.guild.admin:
+    description: Allows access to administrative guild commands
+    default: op
+  mmorpg.npc:
+    description: Allows managing combat training NPCs
+    default: op
+  skillslinger.bank.admin:
+    description: Allows administrative control over bank accounts
+    default: op
+  skillslinger.auctionhouse.admin:
+    description: Allows administrative control over auction house
+    default: op
+  mmorpg.admin.clearportals:
+    description: Allows clearing spawn portals
+    default: op
+  skillslinger.graveyard.admin:
+    description: Allows managing graveyards
+    default: op
+  skillslinger.bind:
+    description: Allows binding skills to items
+    default: true
+
+commands:
+  class:
+    description: Class management commands
+    usage: /class <select|info|skills|list|advance|mastery>
+    aliases: [ c ]
+  skill:
+    description: Skill usage commands
+    usage: /skill <skillname|list>
+    aliases: [s]
+  ccclear:
+    description: Removes all status effects and immunities
+    usage: /ccclear
+  resetplayer:
+    description: Completely resets a player's state
+    usage: /resetplayer
+  party:
+    description: Party management commands
+    usage: /party <create|invite|accept|leave>
+  maxlevel:
+    description: Sets your character to maximum level (Testing Only)
+    usage: /maxlevel
+    permission: skillslinger.admin.maxlevel
+  givepotion:
+    description: Gives a custom potion to the player
+    usage: /givepotion <potion_id> [amount]
+    permission: mmorpg.givepotion
+  clearholograms:
+    description: Clears all damage display holograms
+    usage: /clearholograms
+    permission: mmorpg.admin.clearholograms
+  coins:
+    description: Manage coins
+    usage: /coins [pay|give|take|set] [player] [amount]
+  bank:
+    description: Bank vault management
+    usage: /bank [open|upgrade|help]
+    aliases: [ vault ]
+  auctionhouse:
+    description: Access the auction house
+    usage: /auctionhouse [open|sell|listings|help]
+    aliases: [ ah ]
+  sellgold:
+    description: Sells all gold items in your inventory for coins
+    usage: /sellgold [amount]
+    aliases: [ sg ]
+    permission: skillslinger.sellgold
+    permission-message: Go to the exchange to sell gold!
+  clearportals:
+    description: Clears all spawn portals from the world(s)
+    usage: /clearportals [-r <radius>] [-w <world>] [-s]
+    permission: mmorpg.admin.clearportals
+    aliases: [ cportals, cleanportals ]
+  channel:
+    description: Switch between chat channels
+    usage: /channel [channelname]
+    aliases: [ ch ]
+  graveyard:
+    description: Manage graveyards
+    usage: /graveyard [create|remove|list]
+    aliases: [ gy ]
+    permission: skillslinger.graveyard.admin
+  deathchest:
+    description: Locate your death chest
+    usage: /deathchest
+    aliases: [ dc ]
+  bind:
+    description: Bind skills to items for easy casting
+    usage: /bind <skill_name> or /bind clear
+    aliases: [ bindskill, itembind ]
+    permission: skillslinger.bind
+  title:
+    description: Manage player titles
+    usage: /title [list|set|clear|info|give]
+    aliases: [ titles, prefix ]
+    permission: skillslinger.title
+  dungeon:
+    description: Main dungeon command
+    usage: /dungeon [leave|cancel|list|info]
+    aliases: [ dung ]
+  dungeoncreate:
+    description: Create a new dungeon
+    usage: /dungeoncreate [name]
+  dungeonedit:
+    description: Edit an existing dungeon
+    usage: /dungeonedit [name]
+  dungeonentrance:
+    description: Set a dungeon entrance
+    usage: /dungeonentrance [name]
+  dungeonkey:
+    description: Manage dungeon keys
+    usage: /dungeonkey [create|createcustom|check]
+  dungeonmaxtime:
+    description: Set the maximum time limit for a dungeon
+    usage: /dungeonmaxtime [dungeon name] [time in seconds]
+    permission: mmorpg.dungeon.maxtime
+
+

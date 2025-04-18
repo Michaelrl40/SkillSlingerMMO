@@ -1,0 +1,3173 @@
+#Class tiers and level need to be set first
+class-tiers:
+  base:
+    min-level: 1
+    max-level: 1000
+  secondary:
+    min-level: 1
+    max-level: 20
+  master:
+    min-level: 1
+    max-level: 50
+
+#Each class will have customizable stats
+classes:
+
+#Default BASE class
+  Vagrant:
+    tier: BASE
+    parentClass: null
+    baseHealth: 10
+    baseStamina: 1.0
+    baseMana: 10.0
+    healthRegenPercent: 0.015  # 1.5% per second
+    manaRegenPercent: 0.001    # 1% per second
+    staminaRegenPercent: 0.005
+    healthPerLevel: 0.0
+    staminaPerLevel: 0.0
+    manaPerLevel: 1.0
+    allowedArmor:
+    allowedWeapons:
+      - STICK
+    skills:
+      DeathToAll:
+        name: "Death To All"
+        description: "An ancient forbidden power that only the most dedicated vagrants can achieve"
+        unlockLevel: 1000  # Effectively impossible - easter egg level
+        manacost: 0.0      # No mana cost - if you reach level 1000, you deserve it
+        cooldown: 3600     # 1 hour cooldown, just in case
+        hascasttime: true
+        casttime: 5.0     # Long cast time for dramatic effect
+        slowintensity: 0  # No slow effect - the caster is immune to normal limitations
+        istargetedskill: false
+        isharmful: true
+        castDelay: 5      # Seconds before the apocalypse happens
+        beamCount: 50     # Number of destruction beams
+
+#Secondary Classes
+  Healer:
+    tier: SECONDARY
+    parentClass: null
+    baseHealth: 50
+    baseStamina: 100.0
+    baseMana: 50.0
+    healthRegenPercent: 0.015  # 1.5% per second
+    manaRegenPercent: 0.01    # 1% per second
+    staminaRegenPercent: 0.05
+    healthPerLevel: 3.0
+    staminaPerLevel: 5.0
+    manaPerLevel: 2.0
+    usesMana: true
+    allowedArmor:
+    allowedWeapons:
+      - WOODEN_HOE
+      - STONE_HOE
+    skills:
+      Forage:
+        name: "Forage"
+        description: "Search the surrounding area for edible food. Only works on natural terrain."
+        unlockLevel: 1
+        manacost: 0.0
+        staminacost: 0.0
+        cooldown: 45
+        hascasttime: true
+        casttime: 2.0
+        slowintensity: 1
+        istargetedskill: false
+      Heal:
+        name: "Heal"
+        description: "Channel healing energy to restore a small amount of health to yourself or an ally"
+        unlockLevel: 1
+        manacost: 15.0
+        cooldown: 12
+        hascasttime: true
+        casttime: 1.5
+        slowintensity: 1
+        istargetedskill: true
+        isharmful: false
+        range: 10.0
+        healAmount: 15.0
+
+  Mage:
+    tier: SECONDARY
+    parentClass: null
+    baseHealth: 50.0
+    baseStamina: 100.0
+    baseMana: 50.0
+    healthRegenPercent: 0.015  # 1.5% per second
+    manaRegenPercent: 0.07    # 7% per second
+    staminaRegenPercent: 0.06
+    healthPerLevel: 1.0
+    staminaPerLevel: 2.0
+    manaPerLevel: 5.0
+    usesMana: true
+    allowedArmor:
+    allowedWeapons:
+      - STICK
+      - WOODEN_HOE
+      - STONE_HOE
+    skills:
+      Forage:
+        name: "Forage"
+        description: "Search the surrounding area for edible food. Only works on natural terrain."
+        unlockLevel: 1
+        manacost: 0.0
+        staminacost: 0.0
+        cooldown: 45
+        hascasttime: true
+        casttime: 2.0
+        slowintensity: 1
+        istargetedskill: false
+      WeakFireball:
+        name: "Weak Fireball"
+        description: "Launch a small fireball that deals fire damage to your target"
+        unlockLevel: 1
+        manacost: 15.0
+        cooldown: 20
+        hascasttime: true
+        casttime: 0.8
+        slowintensity: 1
+        istargetedskill: false
+        isharmful: true
+        damage: 8.0
+        projectileSpeed: 1.0
+        explosionRadius: 1.0
+
+  Ranger:
+    tier: SECONDARY
+    parentClass: null
+    baseHealth: 50
+    baseStamina: 100.0
+    baseMana: 50.0
+    healthRegenPercent: 0.015  # 1.5% per second
+    manaRegenPercent: 0.01    # 1% per second
+    staminaRegenPercent: 0.05
+    healthPerLevel: 2.0
+    staminaPerLevel: 5.0
+    manaPerLevel: 2.0
+    usesMana: true
+    allowedArmor:
+    allowedWeapons:
+      - BOW
+      - WOODEN_AXE
+      - STONE_AXE
+    skills:
+      Forage:
+        name: "Forage"
+        description: "Search the surrounding area for edible food. Only works on natural terrain."
+        unlockLevel: 1
+        manacost: 0.0
+        staminacost: 0.0
+        cooldown: 45
+        hascasttime: true
+        casttime: 2.0
+        slowintensity: 1
+        istargetedskill: false
+      SummonArrow:
+        name: "Summon Arrow"
+        description: "Conjure a stack of magical arrows"
+        unlockLevel: 1
+        manacost: 15.0
+        cooldown: 10
+        hascasttime: false
+        istargetedskill: false
+
+
+  Rogue:
+    tier: SECONDARY
+    parentClass: null
+    baseHealth: 50
+    baseStamina: 100.0
+    baseMana: 50.0
+    healthRegenPercent: 0.015  # 1.5% per second
+    manaRegenPercent: 0.01    # 1% per second
+    staminaRegenPercent: 0.25
+    healthPerLevel: 2.0
+    staminaPerLevel: 5.0
+    manaPerLevel: 2.0
+    usesStamina: true
+    allowedArmor:
+    allowedWeapons:
+      - WOODEN_SWORD
+      - STONE_SWORD
+      - IRON_SWORD
+    skills:
+      Forage:
+        name: "Forage"
+        description: "Search the surrounding area for edible food. Only works on natural terrain."
+        unlockLevel: 1
+        manacost: 0.0
+        staminacost: 0.0
+        cooldown: 45
+        hascasttime: true
+        casttime: 2.0
+        slowintensity: 1
+        istargetedskill: false
+      Punch:
+        name: "Punch"
+        description: "A quick jab that deals a fixed amount of damage"
+        unlockLevel: 1
+        staminacost: 8.0
+        cooldown: 3
+        hascasttime: false
+        ismeleeskill: true
+        istargetedskill: true
+        isharmful: true
+        range: 2.0
+        damage: 10.0
+
+  Warrior:
+    tier: SECONDARY
+    parentClass: null
+    baseHealth: 50
+    baseStamina: 100.0
+    baseMana: 50.0
+    healthRegenPercent: 0.015  # 1.5% per second
+    manaRegenPercent: 0.01    # 1% per second
+    staminaRegenPercent: 0.05
+    healthPerLevel: 2.0
+    staminaPerLevel: 2.0
+    manaPerLevel: 2.0
+    allowedArmor:
+    allowedWeapons:
+      - WOODEN_SWORD
+      - STONE_SWORD
+      - IRON_SWORD
+    skills:
+      Strike:
+        name: "Strike"
+        description: "A basic weapon attack that deals your weapon's damage"
+        unlockLevel: 1
+        staminacost: 10.0
+        cooldown: 6
+        hascasttime: false
+        ismeleeskill: true
+        istargetedskill: true
+        isharmful: true
+        range: 3.0
+        damage: 10.0  # Fallback damage if weapon damage can't be determined
+      Forage:
+        name: "Forage"
+        description: "Search the surrounding area for edible food. Only works on natural terrain."
+        unlockLevel: 1
+        manacost: 0.0
+        staminacost: 0.0
+        cooldown: 45
+        hascasttime: true
+        casttime: 2.0
+        slowintensity: 1
+        istargetedskill: false
+
+
+
+#HEALERS
+  Bard:
+    tier: MASTER
+    parentClass: Healer
+    baseHealth: 85
+    baseStamina: .0
+    baseMana: 50.0
+    healthRegenPercent: 0.015  # 1.5% per second
+    manaRegenPercent: 0.06    # 1% per second
+    staminaRegenPercent: 0.05
+    healthPerLevel: 2.0
+    staminaPerLevel: 0.0
+    manaPerLevel: 5.0
+    usesMana: true
+    allowedArmor:
+      - LEATHER_HELMET
+      - LEATHER_CHESTPLATE
+      - LEATHER_LEGGINGS
+      - LEATHER_BOOTS
+      - GOLD_CHESTPLATE
+    allowedWeapons:
+      - MUSIC_DISC_13
+      - MUSIC_DISC_CAT
+      - MUSIC_DISC_13
+      - MUSIC_DISC_CAT
+      - MUSIC_DISC_BLOCKS
+      - MUSIC_DISC_CHIRP
+      - MUSIC_DISC_FAR
+      - MUSIC_DISC_MALL
+      - MUSIC_DISC_MELLOHI
+      - MUSIC_DISC_STAL
+      - MUSIC_DISC_STRAD
+      - MUSIC_DISC_WARD
+      - MUSIC_DISC_11
+      - MUSIC_DISC_WAIT
+      - MUSIC_DISC_OTHERSIDE
+      - MUSIC_DISC_5
+      - MUSIC_DISC_PIGSTEP
+      - MUSIC_DISC_RELIC
+    skills:
+      battlecry:
+        name: "Battle Cry"
+        description: "Unleash a powerful cry that damages nearby enemies"
+        unlockLevel: 5
+        manacost: 30.0
+        cooldown: 20
+        damage: 15.0
+        radius: 12.0
+      swiftanthem:
+        name: "Swift Anthem"
+        description: "Yellow▶Yellow▶Yellow: Perform an energizing melody that grants your party Speed IV for 10 seconds."
+        unlockLevel: 25
+        manacost: 30  # Cost is handled by the individual notes
+        cooldown: 10  # Cooldown is handled by note costs
+        duration: 200  # 10 seconds
+        amplifier: 2  # Speed III
+        isharmful: false
+      lullaby:
+        name: "Lullaby"
+        description: "Blue▶Blue▶Green: Play a soothing melody that puts enemies to sleep in an 8-block radius for 5 seconds."
+        unlockLevel: 50
+        manacost: 30  # Cost handled by notes
+        cooldown: 25
+        radius: 8.0
+        sleepduration: 5000  # 5 seconds
+        isharmful: true
+      manasong:
+        name: "Mana Song"
+        description: "Blue▶Blue▶Yellow: Perform an enchanting melody that increases mana regeneration by 50% for your party for 10 seconds."
+        unlockLevel: 35
+        manacost: 30  # Cost handled by notes
+        cooldown: 30
+        duration: 200  # 10 seconds
+        manaregenbonus: 0.5  # 50% increase
+        isharmful: false
+      warchant:
+        name: "War Chant"
+        description: "Red▶Yellow▶Red: Perform a battle chant that increases weapon damage by 30% for you and your party for 10 seconds."
+        unlockLevel: 15
+        manacost: 30  # Cost handled by notes
+        cooldown: 25
+        duration: 200  # 10 seconds
+        damagebonus: 0.3  # 30% increase
+        isharmful: false
+      healinghymn:
+        name: "Healing Hymn"
+        description: "Perform a healing song that restores health to yourself and party members"
+        unlockLevel: 10
+        manacost: 30.0
+        cooldown: 30
+        healpertick: 3.0
+        duration: 300
+        radius: 12.0
+        tickinterval: 20
+      sonicboom:
+        name: "Sonic Boom"
+        description: "Red▶Red▶Yellow: Launch a devastating cone of sound that deals 15 damage and knocks back enemies."
+        unlockLevel: 40
+        manacost: 30  # Cost handled by notes
+        cooldown: 20
+        damage: 15.0
+        range: 12.0
+        knockbackstrength: 1.5
+        isharmful: true
+      resonantshield:
+        name: "Resonant Shield"
+        description: "Blue▶Yellow▶Blue: Create a protective barrier that reduces damage by 25% and provides a small heal to your party for 8 seconds."
+        unlockLevel: 20
+        manacost: 30  # Cost handled by notes
+        cooldown: 25
+        duration: 160  # 8 seconds
+        damagereduction: 0.25  # 25% damage reduction
+        healamount: 20.0  # Initial heal amount
+        isharmful: false
+
+  Chronomancer:
+    tier: MASTER
+    parentClass: Healer
+    baseHealth: 70.0
+    baseStamina: 0.0
+    baseMana: 50.0
+    healthRegenPercent: 0.015
+    manaRegenPercent: 0.08
+    staminaRegenPercent: 0.06
+    healthPerLevel: 1.5
+    staminaPerLevel: 0.0
+    manaPerLevel: 5.0
+    usesMana: true
+    allowedArmor:
+      - LEATHER_HELMET
+      - LEATHER_CHESTPLATE
+      - LEATHER_LEGGINGS
+      - LEATHER_BOOTS
+      - GOLD_CHESTPLATE
+    allowedWeapons:
+      - WOODEN_HOE
+      - STONE_HOE
+      - IRON_HOE
+      - DIAMOND_HOE
+      - NETHERITE_HOE
+    skills:
+      Rewind:
+        name: "Rewind"
+        description: "Rewind a player to their position from 5 seconds ago and heal them"
+        unlockLevel: 17
+        manacost: 45.0
+        cooldown: 20
+        hascasttime: true
+        casttime: 1.5
+        slowintensity: 1
+        istargetedskill: true  # This can be set to false if you want it to be self-cast only
+        isharmful: false
+        range: 15.0
+        healamount: 50.0
+      TimeGlitch:
+        name: "Time Glitch"
+        description: "Phase in and out of reality, creating temporal explosions"
+        unlockLevel: 12
+        manacost: 40.0
+        cooldown: 30
+        hascasttime: false
+        duration: 10.0            # Duration in seconds
+        glitchInterval: 0.5     # Time between glitches in seconds
+        damage: 8.0              # Damage per glitch explosion
+        radius: 3.0              # Explosion radius
+      TimeStop:
+        name: "Time Stop"
+        description: "Freeze an enemy in time, stunning them"
+        unlockLevel: 35
+        manacost: 35.0
+        cooldown: 15
+        hascasttime: true
+        casttime: 1.0
+        slowintensity: 1
+        istargetedskill: true
+        isharmful: true
+        range: 15.0
+        duration: 3.0      # Duration in seconds
+      FutureSight:
+        name: "Future Sight"
+        description: "Grant an ally a shield that blocks the next incoming CC effect"
+        unlockLevel: 42
+        manacost: 35.0
+        cooldown: 20
+        hascasttime: true
+        casttime: 1.0
+        slowintensity: 1
+        istargetedskill: true
+        isharmful: false
+        range: 15.0
+        duration: 8.0      # Duration in seconds
+      TimeWave:
+        name: "Time Wave"
+        description: "Send out a wave that reduces active cooldowns for allies it passes through"
+        unlockLevel: 27
+        manacost: 20.0
+        cooldown: 25
+        hascasttime: false
+        range: 15.0             # How far the wave travels
+        cooldownReduction: 5.0  # Seconds to reduce cooldowns by
+        waveSpeed: 0.5         # Speed of the wave travel
+        width: 3.0            # Width of the wave effect
+      Chronoshift:
+        name: "Chronoshift"
+        description: "Manipulate time to swap positions with your target"
+        unlockLevel: 23
+        manacost: 35.0
+        cooldown: 12
+        hascasttime: true
+        casttime: 1.0
+        slowintensity: 1
+        istargetedskill: true
+        isharmful: false   # Set to false so we can target both allies and enemies
+        range: 15.0
+      EraserBeam:
+        name: "Eraser Beam"
+        description: "Fire a golden beam that damages enemies and heals allies"
+        unlockLevel: 1
+        manacost: 40.0
+        cooldown: 12
+        hascasttime: false
+        istargetedskill: false
+        damage: 15.0          # Damage to enemies
+        healing: 10.0         # Healing to allies
+        range: 20.0          # Beam range
+        beamwidth: 1.0       # Width of the beam's hit detection
+      TemporalExile:
+        name: "Temporal Exile"
+        description: "Banish a target to the void between timelines"
+        unlockLevel: 50
+        manacost: 50.0
+        cooldown: 25
+        hascasttime: true
+        casttime: 1.0
+        slowintensity: 1
+        istargetedskill: true
+        isharmful: true
+        range: 15.0           # Range for targeting
+        exileduration: 5.0    # Duration in void in seconds
+
+  Druid:
+    tier: MASTER
+    parentClass: Healer
+    baseHealth: 75.0
+    baseStamina: 100.0
+    baseMana: 150.0
+    healthRegenPercent: 0.015
+    manaRegenPercent: 0.06
+    staminaRegenPercent: 0.25
+    healthPerLevel: 2.0
+    staminaPerLevel: 0.0
+    manaPerLevel: 5.0
+    usesMana: true
+    usesStamina: true
+    allowedArmor:
+      - LEATHER_HELMET
+      - LEATHER_CHESTPLATE
+      - LEATHER_LEGGINGS
+      - LEATHER_BOOTS
+      - LEATHER_HELMET
+      - GOLD_CHESTPLATE
+    allowedWeapons:
+      - STICK
+      - WOODEN_HOE
+      - STONE_HOE
+      - IRON_HOE
+      - DIAMOND_HOE
+      - NETHERITE_HOE
+    skills:
+      WolfForm:
+        name: "Wolf Form"
+        description: "Transform into a swift and agile wolf"
+        unlockLevel: 15
+        manacost: 30.0
+        cooldown: 5
+        hascasttime: false
+        istoggleableskill: true
+        formname: "Wolf"
+        duration: 30
+        speedbonus: 1
+        jumpbonus: 1
+      PandaForm:
+        name: "Panda Form"
+        description: "Transform into a mighty panda with powerful but slow attacks"
+        unlockLevel: 30
+        manacost: 30.0
+        cooldown: 4
+        hascasttime: false
+        istoggleableskill: true
+        formname: "Panda"
+        duration: 30
+        strengthbonus: 1
+        healthbonus: 6
+        defensebonus: 0.2
+        movementpenalty: 3
+        attackspeedmodifier: 0.3  # 0.5 means half normal attack speed
+      Regrowth:
+        name: "Regrowth"
+        description: "A powerful healing spell that can only be used in base form"
+        unlockLevel: 25
+        manacost: 35.0
+        cooldown: 15
+        hascasttime: true
+        casttime: 1.5
+        slowintensity: 1
+        istargetedskill: true
+        range: 10.0
+        initialheal: 20.0
+        overtimeheal: 20.0
+        duration: 10
+        requiredform: "none"    # This is crucial - means base form only
+        useinforms: false       # This is crucial - cannot use while transformed
+        istoggleableskill: false  # This is not a shapeshifting skill
+        isharmful: false
+      wrath:
+        name: "Wrath"
+        description: "Channel nature's fury into a tracking projectile that pursues your target"
+        unlockLevel: 1
+        manacost: 25.0
+        cooldown: 12
+        hascasttime: true
+        casttime: 2.0
+        slowintensity: 1
+        range: 20.0
+        istargetedskill: true
+        damage: 15.0
+        requiredform: "none"      # Base form only
+        useinforms: false         # Cannot use while transformed
+        projectilespeed: 0.5
+        trackingstrength: 0.2
+        maxduration: 200
+        isharmful: true
+      rip:
+        name: "Rip"
+        description: "Viciously tear into your target, causing them to bleed over time"
+        unlockLevel: 20
+        manacost: 25.0
+        cooldown: 10
+        ismeleeskill: true         # Mark as melee skill
+        meleerange: 2.0            # Close range for melee
+        hascasttime: false         # Instant cast for better melee feel
+        istargetedskill: true      # Uses targeting system
+        isharmful: true           # This is a damaging skill
+        damageper_tick: 3.0       # Damage per tick
+        tick_count: 5             # Number of ticks
+        tick_interval: 20         # Ticks between damage (20 = 1 second)
+        requiredform: "Wolf"      # Only useable in Wolf form
+        useinforms: true         # Can be used while transformed
+        istoggleableskill: false  # This is not a shapeshift skill
+      HealingTouch:
+        name: "Healing Touch"
+        description: "Channel natural energy to heal yourself or an ally"
+        unlockLevel: 5
+        manacost: 20.0
+        cooldown: 8
+        hascasttime: true
+        casttime: 1.0
+        slowintensity: 1
+        istargetedskill: true
+        range: 10.0
+        healamount: 10.0
+        requiredform: "none"      # Must be in Druid form
+        useinforms: false          # Cannot use while transformed
+        isharmful: false
+      root:
+        name: "Root"
+        description: "Summon roots from the earth to hold your target in place"
+        unlockLevel: 35
+        manacost: 25.0
+        cooldown: 15
+        hascasttime: true
+        casttime: 1.0
+        slowintensity: 1
+        istargetedskill: true   # This is a targeted skill
+        range: 15.0              # Targeting range
+        rootDuration: 3000      # 3 seconds in milliseconds
+        requiredform: "none"    # Must be in base form
+        useinforms: false       # Cannot use while transformed
+        isharmful: true
+      Camouflage:
+        name: "Camouflage"
+        description: "Blend perfectly with your surroundings while stationary. Moving or taking damage breaks the effect."
+        unlockLevel: 40
+        manacost: 0
+        cooldown: 30
+        hascasttime: false
+        duration: 30       # Duration in seconds
+        detectionrange: 2.0
+        requiredform: "Wolf"  # Only useable in Wolf form
+        useinforms: true     # Can be used while transformed
+      rebirth:
+        name: "Rebirth"
+        description: "Teleports a party member to you and restores half their health and mana"
+        manacost: 50
+        cooldown: 300  # 5 minutes
+        hascasttime: true
+        casttime: 10.0  # 3 second cast
+        slowintensity: 4
+        range: 30.0
+        unlockLevel: 50
+        isharmful: false
+        requiredform: "none"
+
+  Priest:
+    tier: MASTER
+    parentClass: Healer
+    baseHealth: 70
+    baseStamina: 0
+    baseMana: 50.0
+    manaRegenPercent: 0.08    # 1% per second
+    staminaRegenPercent: 0
+    healthPerLevel: 1.0
+    staminaPerLevel: 0.0
+    manaPerLevel: 7.0
+    usesMana: true
+    allowedArmor:
+      - LEATHER_HELMET
+      - LEATHER_CHESTPLATE
+      - LEATHER_LEGGINGS
+      - LEATHER_BOOTS
+      - LEATHER_HELMET
+      - GOLD_CHESTPLATE
+    allowedWeapons:
+      - WOODEN_SWORD
+      - STICK
+      - WOODEN_HOE
+      - STONE_HOE
+      - IRON_HOE
+      - DIAMOND_HOE
+      - NETHERITE_HOE
+    skills:
+      Mend:
+        name: "Mend"
+        description: "Channel divine energy to heal a target or yourself"
+        unlockLevel: 1
+        manacost: 25.0
+        cooldown: 8
+        hascasttime: true
+        casttime: 1.5
+        slowintensity: 4
+        istargetedskill: true
+        isharmful: false    # This is crucial for party targeting
+        range: 12.0
+        healamount: 15.0
+      RadiantBurst:
+        name: "Radiant Burst"
+        description: "Release healing light that mends all party members near you"
+        unlockLevel: 50
+        manacost: 45.0
+        cooldown: 15
+        hascasttime: true
+        casttime: 2.0
+        slowintensity: 1
+        isharmful: false    # Important for party targeting
+        healamount: 12.0
+        radius: 8.0
+      PrayerOfPreservation:
+        name: "Prayer of Preservation"
+        description: "Bless target with healing energy that restores health over time"
+        unlockLevel: 10
+        manacost: 35.0
+        cooldown: 12
+        hascasttime: true
+        casttime: 1.0
+        isharmful: false
+        istargetedskill: true
+        range: 10.0
+        initialheal: 5.0    # Initial burst healing
+        hothealing: 3.0     # Healing per tick
+        hotduration: 8      # How long the HoT lasts in seconds
+        tickrate: 2         # How often the HoT heals
+      DesperatePrayer:
+        name: "Desperate Prayer"
+        description: "Channel emergency healing to yourself when in dire need. Healing increased when below 30% health"
+        unlockLevel: 25
+        manacost: 50.0
+        cooldown: 25
+        hascasttime: false    # Instant cast for emergency use
+        isharmful: false
+        baseheal: 20.0
+        lowhealthbonus: 15.0  # Additional healing when below threshold
+        healththreshold: 0.3  # 30% health threshold
+      SoulWard:
+        name: "Soul Ward"
+        description: "Harness soul energy to create a protective barrier around your ally, absorbing incoming damage"
+        unlockLevel: 45
+        manacost: 30.0
+        cooldown: 5
+        hascasttime: true
+        casttime: 1.0
+        isharmful: false
+        istargetedskill: true
+        range: 10.0
+        shieldamount: 40.0      # Amount of damage the shield can absorb
+        shieldduration: 30      # How long the shield lasts
+        immunityperiod: 15      # Time before target can be shielded again
+      Smite:
+        name: "Smite"
+        description: "Call down divine energy to damage and repel your target"
+        unlockLevel: 15
+        manacost: 30.0
+        cooldown: 8
+        hascasttime: false    # Instant cast for responsive gameplay
+        istargetedskill: true
+        isharmful: true      # This is a damaging skill
+        range: 10.0
+        damage: 12.0         # Base magic damage
+        knockbackforce: 0.5  # Strength of the knockback (blocks)
+      Rebuke:
+        name: " Rebuke"
+        description: "Channel holy light to awe enemies, causing them to slowly back away"
+        unlockLevel: 35
+        manacost: 35.0
+        cooldown: 15
+        hascasttime: true
+        casttime: 1.0
+        isharmful: true
+        radius: 5.0          # Smaller radius than TerrifyingShout
+        fearduration: 2000   # 2 seconds, shorter duration
+        fleespeed: 0.3      # Slower movement speed for more controlled retreat
+      Condemnation:
+        name: "Condemnation"
+        description: "Mark your target with divine judgment, causing holy damage over time"
+        unlockLevel: 30
+        manacost: 40.0
+        cooldown: 15
+        hascasttime: true
+        casttime: 1.5
+        istargetedskill: true
+        isharmful: true    # Since this deals damage
+        range: 10.0
+        initialdamage: 5.0   # Initial damage when applied
+        tickdamage: 3.0      # Damage per tick
+        duration: 8          # How long the DoT lasts in seconds
+        tickrate: 1          # How often the damage occurs (in seconds)
+
+#Mages
+  Arcanist:
+    tier: MASTER
+    parentClass: Mage
+    baseHealth: 70.0
+    baseStamina: 0.0
+    baseMana: 50.0
+    healthRegenPercent: 0.015  # 1.5% per second
+    manaRegenPercent: 0.08    # 7% per second
+    staminaRegenPercent: 0.06
+    healthPerLevel: 1.0
+    staminaPerLevel: 2.0
+    manaPerLevel: 5.0
+    usesMana: true
+    allowedArmor:
+      - LEATHER_HELMET
+      - LEATHER_CHESTPLATE
+      - LEATHER_LEGGINGS
+      - LEATHER_BOOTS
+      - GOLD_HELMET
+    allowedWeapons:
+      - STICK
+      - WOODEN_HOE
+      - STONE_HOE
+      - IRON_HOE
+      - DIAMOND_HOE
+      - NETHERITE_HOE
+    skills:
+      arcanemissiles:
+        name: "Arcane Missiles"
+        description: "Channel arcane energy to fire three tracking missiles at your target"
+        unlockLevel: 10
+        manacost: 35.0
+        cooldown: 12
+        hascasttime: true
+        casttime: 1.0
+        slowintensity: 4
+        damage: 15.0          # Damage per missile
+        projectilespeed: 1.2  # How fast missiles travel
+        range: 15.0           # Maximum missile range
+      blink:
+        name: "Blink"
+        description: "Teleport a short distance in the direction you are looking"
+        unlockLevel: 25
+        manacost: 25.0
+        cooldown: 8
+        hascasttime: false
+        distance: 15.0     # Maximum blink distance
+      polymorph:
+        name: "Polymorph"
+        description: "Transform your target into a helpless chicken for 10 seconds or until damaged"
+        unlockLevel: 20
+        manacost: 45.0
+        cooldown: 25
+        hascasttime: true
+        casttime: 1.5
+        slowintensity: 1
+        istargetedskill: true
+        range: 15.0
+        duration: 10000  # 10 seconds in milliseconds
+      groupteleport:
+        name: "Group Teleport"
+        description: "Teleport your party members to your location"
+        unlockLevel: 50
+        manacost: 50.0
+        cooldown: 300  # 5 minute cooldown
+        warmuptime: 3.0
+        radius: 30
+        hascasttime: false
+      evocation:
+        name: "Evocation"
+        description: "Channel to restore 80% of your maximum mana over 5 seconds"
+        unlockLevel: 35
+        manacost: 0
+        cooldown: 180
+        channeltime: 5.0
+        manarestorepercent: 0.8
+        tickspermanagain: 5
+        hascasttime: false
+      fireball:
+        name: "Fireball"
+        description: "Launch a blazing fireball"
+        unlockLevel: 1
+        manacost: 25.0
+        cooldown: 5
+        projectilespeed: 1.5
+        spread: 0.1
+        hascasttime: false
+      counterspell:
+        name: "Counterspell"
+        description: "Interrupt an enemy's spellcasting and silence them"
+        unlockLevel: 15
+        manacost: 35.0
+        cooldown: 15
+        silenceduration: 3.0
+        silenceintensity: 1
+        range: 15.0
+        hascasttime: false
+        istargetedskill: true
+        isharmful: true
+      manabeam:
+        name: "Mana Beam"
+        description: "Channel a concentrated beam of arcane energy that grows stronger over time"
+        unlockLevel: 40
+        cooldown: 15
+        initialmanacost: 30.0
+        manapersecond: 15.0
+        basedamage: 8.0
+        damageincreaseperSecond: 2.0
+        maxdamagemultiplier: 3.0
+        beamcheckinterval: 5
+        range: 15.0
+        hascasttime: false
+        istargetedskill: true
+        isharmful: true
+      SpawnPortal:
+        unlocklevel: 30
+        cooldown: 120
+        manacost: 100.0
+
+  DarkBlade:
+    tier: MASTER
+    parentClass: Mage
+    baseHealth: 90
+    baseStamina: 80.0
+    baseMana: 120.0
+    healthRegenPercent: 0.015  # 1.5% per second
+    manaRegenPercent: 0.06    # 6% per second
+    staminaRegenPercent: 0.05
+    healthPerLevel: 2.5
+    staminaPerLevel: 0.0
+    manaPerLevel: 4.0
+    usesMana: true
+    allowedArmor:
+      - LEATHER_HELMET
+      - LEATHER_CHESTPLATE
+      - LEATHER_LEGGINGS
+      - LEATHER_BOOTS
+      - GOLD_HELMET
+    allowedWeapons:
+      - WOODEN_SWORD
+      - STONE_SWORD
+      - IRON_SWORD
+      - DIAMOND_SWORD
+      - NETHERITE_SWORD
+      - SHADOW_SLAYER_SCYTHE
+    skills:
+      ShadowBall:
+        name: "Shadow Ball"
+        description: "Summon a sphere of dark energy that falls from above, dealing damage in an area"
+        unlockLevel: 10
+        manacost: 35.0
+        cooldown: 12
+        hascasttime: true
+        casttime: 1.5
+        slowintensity: 1
+        istargetedskill: true
+        isharmful: true
+        range: 20.0           # Maximum targeting range
+        damage: 18.0          # Base damage
+        radius: 3.5           # Explosion radius
+        height: 10.0          # Height from which the ball falls
+      DarkClaw:
+        name: "Dark Claw"
+        description: "Strike your target with shadowy claws, causing damage over time and slowing them"
+        unlockLevel: 20
+        manacost: 30.0
+        cooldown: 15
+        hascasttime: false
+        istargetedskill: true
+        ismeleeskill: true
+        isharmful: true
+        range: 3.0           # Melee range
+        initialdamage: 8.0   # Initial hit damage
+        dotdamage: 4.0       # Damage per tick
+        dotduration: 2       # Duration in seconds
+        tickrate: 1          # Seconds between damage ticks
+        slowduration: 2      # Duration of slow effect in seconds
+        slowintensity: 2     # Level of slow effect
+      Nightmare:
+        name: "Nightmare"
+        description: "Drag your target into a nightmare realm for a brief duration"
+        unlockLevel: 50
+        manacost: 60.0
+        cooldown: 45
+        hascasttime: true
+        casttime: 2.0
+        slowintensity: 4
+        istargetedskill: true
+        isharmful: true
+        range: 15.0          # Target range
+        duration: 10         # Duration in seconds
+        damage: 5.0          # Damage per second in nightmare
+        arenawidth: 9        # Width of the nightmare arena
+        arenaheight: 7       # Height of the nightmare arena
+      ShadowStep:
+        name: "Shadow Step"
+        description: "Phase through shadows to appear behind your target"
+        unlockLevel: 30
+        manacost: 25.0
+        cooldown: 10
+        hascasttime: false
+        istargetedskill: true
+        isharmful: false
+        range: 15.0         # Maximum teleport range
+        backstabDistance: 1.0  # How far behind target to teleport
+      SoulShatter:
+        name: "Soul Shatter"
+        description: "Strike your target's soul, dealing massive damage based on their missing health"
+        unlockLevel: 25
+        manacost: 45.0
+        cooldown: 20
+        hascasttime: false
+        istargetedskill: true
+        isharmful: true
+        range: 5.0          # Close range execution
+        basedamage: 15.0    # Base damage
+        missinghealthpercent: 0.1  # 10% of missing health as bonus damage
+        threshold: 0.4      # 40% HP threshold for bonus effects
+      voidpierce:
+        name: "Void Pierce"
+        unlockLevel: 1
+        description: "Passive: Every third attack pierces your target with void energy, dealing bonus damage and siphoning mana"
+        damage: 5.0          # Damage dealt on third hit
+        manasiphon: 5.0      # Amount of mana stolen
+      Terrorize:
+        name: "Terrorize"
+        description: "Force your target into a nightmare-filled paralysis of pure terror"
+        unlockLevel: 40
+        manacost: 40.0
+        cooldown: 20
+        hascasttime: true
+        casttime: 1.5
+        slowintensity: 1
+        istargetedskill: true
+        isharmful: true
+        range: 8.0           # Medium range
+        sleepduration: 4000  # 4 seconds of sleep
+        damage: 0.0          # Small initial damage
+        nightmaredamage: 0 # Damage per second while sleeping
+
+  Frostmage:
+    tier: MASTER
+    parentClass: Mage
+    baseHealth: 70.0
+    baseStamina: 50.0
+    baseMana: 150.0
+    healthRegenPercent: 0.015  # 1.5% per second
+    manaRegenPercent: 0.07    # 7% per second
+    staminaRegenPercent: 0.06
+    healthPerLevel: 1.5
+    staminaPerLevel: 0.0
+    manaPerLevel: 5.0
+    usesMana: true
+    allowedArmor:
+      - LEATHER_HELMET
+      - LEATHER_CHESTPLATE
+      - LEATHER_LEGGINGS
+      - LEATHER_BOOTS
+      - LEATHER_HELMET
+      - GOLD_HELMET
+    allowedWeapons:
+      - STICK
+      - WOODEN_HOE
+      - STONE_HOE
+      - IRON_HOE
+      - DIAMOND_HOE
+      - NETHERITE_HOE
+      - SNOWBALL
+    skills:
+      iceblock:
+        name: "Ice Block"
+        description: "Encase yourself in protective ice"
+        unlockLevel: 35
+        duration: 5
+        manacost: 50
+        cooldown: 30
+      Icebolt:
+        name: "IceBolt"
+        description: "Launches a freezing projectile"
+        unlockLevel: 1
+        damage: 8.0
+        range: 30.0
+        speed: 2.5
+        slowduration: 3
+        slowintensity: 2
+        manacost: 20
+        cooldown: 5
+      blizzard:
+        name: "Blizzard"
+        description: "Summons a devastating storm of ice"
+        duration: 10            # How long the blizzard lasts in seconds
+        snowballspertick: 1     # How many snowballs spawn each tick
+        damage: 5.0
+        range: 20.0
+        aoesize: 10.0
+        slowduration: 3
+        slowintensity: 2
+        manacost: 50
+        cooldown: 20
+      FrostNova:
+        name: "FrostNova"
+        description: "Throw up snow and slow all you enemies."
+        unlocklevel: 40
+        manacost: 30
+        cooldown: 45
+        hascasttime: true
+        casttime: 1
+        slowintensity: 1
+        radius: 8.0
+        slowduration: 5000
+      IceSpike:
+        name: "IceSpike"
+        description: "Launches a spike of ice that damages and slows enemies."
+        unlocklevel: 15
+        manacost: 50.0
+        cooldown: 10.0
+        damage: 12.0
+        range: 15.0
+        slowduration: 5.0
+        hascasttime: false
+      IceBarrage:
+        name: "Ice Barrage"
+        description: "Launch a barrage of tracking ice shards that seek your target"
+        unlockLevel: 20
+        manacost: 45.0
+        cooldown: 15
+        hascasttime: true
+        casttime: 1.5
+        slowintensity: 2
+        istargetedskill: true
+        damage: 8.0           # Damage per projectile
+        range: 20.0
+        projectilespeed: 0.8  # How fast projectiles move
+        trackingstrength: 0.15 # How well they track (0-1)
+        maxduration: 100      # Maximum projectile lifetime in ticks
+        projectilecount: 5    # Number of projectiles
+        firedelay: 0.5       # Delay between projectiles in seconds
+      IceShield:
+        name: "Ice Shield"
+        description: "Surround yourself with protective ice magic that absorbs incoming damage"
+        unlockLevel: 25
+        manacost: 40.0
+        cooldown: 45
+        hascasttime: true
+        casttime: 2.0
+        slowintensity: 2
+        istargetedskill: false
+        shieldAmount: 50.0     # Amount of damage the shield can absorb
+        duration: 20           # Duration in seconds before the shield fades
+      FrostWalk:
+        name: "Frost Walk"
+        description: "Temporarily gain the power to freeze water beneath your feet"
+        unlockLevel: 10
+        manacost: 30.0
+        cooldown: 45
+        hascasttime: true
+        casttime: 1.5
+        slowintensity: 1
+        istargetedskill: false
+        duration: 20          # Duration in seconds
+        radius: 2            # Radius of ice creation (like enchantment level 3
+
+  Windwaker:
+    tier: MASTER
+    parentClass: Mage
+    baseHealth: 60.0
+    baseStamina: 50.0
+    baseMana: 150.0
+    healthRegenPercent: 0.015  # 1.5% per second
+    manaRegenPercent: 0.10    # 3% every 5 seconds
+    staminaRegenPercent: 0.10 # 10% every 6 seconds
+    healthPerLevel: 1.0
+    staminaPerLevel: 2.0
+    manaPerLevel: 5.0
+    usesMana: true
+    allowedArmor:
+      - LEATHER_HELMET
+      - LEATHER_CHESTPLATE
+      - LEATHER_LEGGINGS
+      - LEATHER_BOOTS
+      - LEATHER_HELMET
+      - GOLD_BOOTS
+    allowedWeapons:
+      - STICK
+      - WOODEN_HOE
+      - STONE_HOE
+      - IRON_HOE
+      - DIAMOND_HOE
+      - NETHERITE_HOE
+    skills:
+      Tornado:
+        name: "Tornado"
+        description: "Summon a swirling tornado that traps and launches enemies"
+        unlockLevel: 30
+        manacost: 20.0
+        cooldown: 15
+        radius: 5.0
+        duration: 5
+        damage: 20.0
+        heightoffset: 2.5
+        launchpower: 2.0
+      bolt:
+        name: "Lightning Bolt"
+        description: "Strike your target with lightning"
+        unlockLevel: 15
+        manacost: 35.0
+        cooldown: 12
+        hascasttime: true
+        casttime: 1.5
+        slowintensity: 2
+        damage: 15.0
+        range: 20.0             # Using range instead of meleerange
+        istargetedskill: true
+        isharmful: true
+      Gust:
+        name: "Gust"
+        description: "You travel with the wind!"
+        unlockLevel: 20
+        manacost: 20
+        cooldown: 18
+        hascasttime: false
+      GaleForce:
+        name: "Gale Force"
+        description: "Launch a concentrated tunnel of wind that blasts enemies away"
+        unlockLevel: 10
+        manacost: 35.0
+        cooldown: 12
+        damage: 15.0          # Base damage
+        range: 12.0           # How far the tunnel extends
+        knockbackforce: 1.5   # How far enemies are knocked back
+        conespread: 0.3       # How wide the cone gets as it extends
+      Slipstream:
+        name: "Slipstream"
+        description: "Launch yourself and nearby allies high into the air with wind protection"
+        unlockLevel: 50
+        manacost: 100.0
+        cooldown: 120
+        hascasttime: true
+        casttime: 1.0
+        slowintensity: 1
+        istargetedskill: false
+        launchheight: 30.0     # Height in blocks to launch players
+        launchradius: 10.0      # Radius to affect party members
+        ascendspeed: 1.5       # Speed of ascent
+        slowfallduration: 20   # How long slow fall lasts in seconds
+      WindChop:
+        name: "Wind Chop"
+        description: "Strike a distant target with a blade of wind"
+        unlockLevel: 1
+        manacost: 15.0
+        cooldown: 5
+        hascasttime: false  # Instant cast
+        istargetedskill: true
+        damage: 10.0
+        range: 15.0
+      Updraft:
+        name: "Updraft"
+        description: "Launch an enemy skyward with a powerful gust of wind"
+        unlockLevel: 40
+        manacost: 30.0
+        cooldown: 15
+        hascasttime: false  # Instant cast
+        istargetedskill: true
+        range: 15.0
+        levitationduration: 3   # Duration in seconds
+        levitationamplifier: 2  # Strength of levitation (0-based, so 2 = level 3)
+
+#Rangers
+  Bandolier:
+    tier: MASTER
+    parentClass: Ranger
+    baseHealth: 90
+    baseStamina: 110.0
+    baseMana: 60.0
+    healthRegenPercent: 0.015  # 1.5% per second
+    manaRegenPercent: 0.05    # 5% per second
+    staminaRegenPercent: 0.25
+    healthPerLevel: 2.5
+    staminaPerLevel: 4.0
+    manaPerLevel: 2.0
+    usesMana: true
+    usesStamina: true
+    allowedArmor:
+      - LEATHER_HELMET
+      - LEATHER_CHESTPLATE
+      - LEATHER_LEGGINGS
+      - LEATHER_BOOTS
+      - CHAINMAIL_HELMET
+      - CHAINMAIL_CHESTPLATE
+      - CHAINMAIL_LEGGINGS
+      - CHAINMAIL_BOOTS
+    allowedWeapons:
+      - CROSSBOW
+    skills:
+      CrossbowMastery:
+        name: "Crossbow Mastery"
+        description: "Passive: Your expertise allows you to reload crossbows much faster"
+        unlockLevel: 1
+      RollLeft:
+        name: "Roll"
+        description: "A quick rolling dodge to the left, keeping you close to the ground"
+        unlockLevel: 10
+        staminacost: 15.0
+        cooldown: 10
+        hascasttime: false
+        istargetedskill: false
+        velocity: 1.2          # Base velocity of the roll
+        height: 0.2           # How high off the ground
+        duration: 10          # How many ticks the roll lasts
+        invulnframes: 0.5     # Brief invulnerability during roll
+      RollRight:
+        name: "Roll"
+        description: "A quick rolling dodge to the right, keeping you close to the ground"
+        unlockLevel: 10
+        staminacost: 15.0
+        cooldown: 10
+        hascasttime: false
+        istargetedskill: false
+        velocity: 1.2          # Base velocity of the roll
+        height: 0.2           # How high off the ground
+        duration: 10          # How many ticks the roll lasts
+        invulnframes: 0.5     # Brief invulnerability during roll
+      RapidFire:
+        name: "Rapid Fire"
+        description: "Fire multiple arrows in quick succession"
+        unlockLevel: 30
+        manacost: 35.0
+        cooldown: 15
+        hascasttime: false
+        istargetedskill: false
+        arrowCount: 6          # Number of arrows to fire
+        arrowDamage: 8.0       # Damage per arrow
+        fireDelay: 2           # Ticks between shots (2 = 0.1 seconds)
+        spread: 0.2            # Arrow spread factor
+        arrowVelocity: 2.0     # Arrow speed multiplier
+      Uppercut:
+        name: "Uppercut"
+        description: "Deliver a devastating uppercut that launches enemies skyward"
+        unlockLevel: 25
+        staminacost: 25.0
+        cooldown: 12
+        hascasttime: false
+        istargetedskill: true
+        ismeleeskill: true
+        damage: 10.0          # Base damage
+        meleerange: 3.0       # Range in blocks
+        launchpower: 1.3      # How high they get launched
+        knockupDuration: 1.0  # How long they stay in air (seconds)
+      PushOff:
+        name: "Push Off"
+        description: "Push off your target, sending them flying backward while you leap away"
+        unlockLevel: 40
+        staminacost: 20.0
+        cooldown: 8
+        hascasttime: false
+        istargetedskill: true
+        ismeleeskill: true
+        meleerange: 3.0          # Range to target
+        damage: 5.0              # Base damage
+        pushForce: 1.2          # How far target gets pushed
+        leapForce: 1.0          # How far you leap back
+        height: 0.3             # Slight upward boost for smooth movement
+      Bladebreaker:
+        name: "Bladebreaker"
+        description: "A lightning-fast strike that disarms your opponent"
+        unlockLevel: 50
+        staminacost: 25.0
+        cooldown: 15
+        hascasttime: false
+        istargetedskill: true
+        ismeleeskill: true
+        meleerange: 3.0          # Range to target
+        damage: 8.0              # Base damage
+        disarmDuration: 4000     # Duration in milliseconds
+      SummonArrow:
+        name: "Summon Arrow"
+        description: "Conjure a stack of magical arrows"
+        unlockLevel: 1
+        manacost: 15.0
+        cooldown: 10
+        hascasttime: false
+        istargetedskill: false
+
+  ElementalRanger:
+    tier: MASTER
+    parentClass: Ranger
+    baseHealth: 90
+    baseStamina: 80.0
+    baseMana: 100.0
+    healthRegenPercent: 0.015  # 1.5% per second
+    manaRegenPercent: 0.05    # 5% per second
+    staminaRegenPercent: 0.06
+    healthPerLevel: 2.0
+    staminaPerLevel: 3.0
+    manaPerLevel: 4.0
+    usesMana: true
+    usesStamina: true
+    allowedArmor:
+      - LEATHER_HELMET
+      - LEATHER_CHESTPLATE
+      - LEATHER_LEGGINGS
+      - LEATHER_BOOTS
+      - CHAINMAIL_HELMET
+      - CHAINMAIL_CHESTPLATE
+      - CHAINMAIL_LEGGINGS
+      - CHAINMAIL_BOOTS
+    allowedWeapons:
+      - BOW
+    skills:
+      SummonArrow:
+        name: "Summon Arrow"
+        description: "Conjure a stack of magical arrows"
+        unlockLevel: 1
+        manacost: 15.0
+        cooldown: 10
+        hascasttime: false
+        istargetedskill: false
+      BowMastery:
+        name: "Bow Mastery"
+        description: "Passive: Your expertise allows you to shoot arrows with greater force"
+        unlockLevel: 1
+        velocitymultiplier: 1.3    # Arrows fly 30% faster
+      TsunamiCall:
+        name: "Tsunami Call"
+        description: "Your next arrow creates a powerful wave that knocks back and slows enemies"
+        unlockLevel: 10
+        manacost: 45.0
+        cooldown: 20
+        hascasttime: false
+        istargetedskill: false
+        radius: 8.0           # How far the wave travels
+        knockbackstrength: 1.5 # Strength of the knockback
+        damage: 5.0           # Damage to enemies hit
+        slowduration: 3       # How long enemies are slowed (seconds)
+        slowamplifier: 1      # Slow level (0 = Slow I, 1 = Slow II, etc.)
+        wavespeed: 0.5        # How fast the wave moves
+        waveheight: 3         # Visual height of the wave
+      NetherShot:
+        name: "Nether Shot"
+        description: "Your next arrow explodes on impact, creating a fiery blast that damages nearby enemies"
+        unlockLevel: 25
+        manacost: 10.0
+        cooldown: 15
+        hascasttime: false
+        istargetedskill: false
+        radius: 4.0            # Explosion radius
+        damage: 12.0           # Base damage (reduced by distance)
+        knockbackstrength: 0.5 # Strength of knockback from explosion
+      EnderArrow:
+        name: "Ender Arrow"
+        description: "Your next arrow teleports you to where it lands"
+        unlockLevel: 50
+        manacost: 35.0
+        cooldown: 12
+        hascasttime: false
+        istargetedskill: false
+        maxdistance: 50.0  # Maximum teleport distance
+      IceArrow:
+        name: "Ice Arrow"
+        description: "Charge up a massive ice arrow that stuns the first enemy it hits"
+        unlockLevel: 30
+        manacost: 45.0
+        cooldown: 15
+        hascasttime: true
+        casttime: 2.0
+        slowintensity: 2
+        istargetedskill: false
+        damage: 15.0          # Base damage
+        stunduration: 3       # Stun duration in seconds
+        projectilespeed: 1.0  # How fast the arrow moves
+        projectilesize: 2.0   # Size of the ice arrow
+        maxrange: 30.0        # Maximum travel distance
+      Ignite:
+        name: "Ignite"
+        description: "Release a wave of fire that burns and knocks back enemies"
+        unlockLevel: 15
+        manacost: 40.0
+        cooldown: 15
+        hascasttime: false
+        istargetedskill: false
+        radius: 5.0            # Explosion radius
+        fireduration: 5        # How long enemies burn (seconds)
+        knockbackstrength: 0.5 # Strength of the knockback
+        initialdamage: 8.0     # Initial hit damage
+        burndamage: 2.0        # Damage per burn tick
+        burnticks: 5           # Number of burn ticks
+      GrandTree:
+        name: "Grand Tree"
+        description: "Instantly lift yourself and nearby allies high into the air"
+        unlockLevel: 40
+        manacost: 60.0
+        cooldown: 45
+        hascasttime: false
+        istargetedskill: true
+        treeheight: 20              # Height to lift players
+        radius: 4.0                 # Radius to affect players
+        fallprotectionduration: 10   # Seconds of fall protection
+
+  Engineer:
+    tier: MASTER
+    parentClass: Ranger
+    baseHealth: 80.0
+    baseStamina: 100.0
+    baseMana: 100.0
+    healthRegenPercent: 0.015
+    manaRegenPercent: 0.05
+    staminaRegenPercent: 0.06
+    healthPerLevel: 2.0
+    staminaPerLevel: 3.0
+    manaPerLevel: 4.0
+    usesMana: true
+    allowedArmor:
+      - LEATHER_HELMET
+      - LEATHER_CHESTPLATE
+      - LEATHER_LEGGINGS
+      - LEATHER_BOOTS
+      - LEATHER_HELMET
+      - GOLD_HELMET
+      - GOLD_BOOTS
+    allowedWeapons:
+      - WOODEN_SWORD
+      - STICK
+      - WOODEN_HOE
+      - STONE_HOE
+      - IRON_HOE
+      - DIAMOND_HOE
+      - NETHERITE_HOE
+    skills:
+      ProximityMine:
+        name: "Proximity Mine"
+        description: "Place an explosive trap that detonates when enemies get too close"
+        unlockLevel: 1
+        manacost: 35.0
+        cooldown: 15
+        hascasttime: true
+        casttime: 1.5
+        slowintensity: 1
+        damage: 12.0
+        explosionradius: 3.0
+        triggerradius: 2.0
+        maxmines: 3
+        lifetime: 30
+        damageallies: false
+      AutoTurret:
+        name: "Auto Turret"
+        description: "Deploy an automated turret that fires at nearby enemies"
+        unlockLevel: 15
+        manacost: 30.0
+        cooldown: 15
+        hascasttime: true
+        casttime: 1.5
+        damage: 5.0          # Damage per shot
+        maxturrets: 2        # Maximum number of active turrets
+        lifetime: 30         # Duration in seconds
+        range: 20.0          # Targeting range
+        firingdelay: 20      # Ticks between shots (20 = 1 second)
+        accuracy: 0.8        # Accuracy from 0.0 to 1.0
+        turrethealth: 40.0   # Turret's max health
+        projectilespeed: 1.5 # Speed of projectiles
+        targetplayers: true  # Whether turret can target players
+      OverclockedWeapon:
+        name: "Overclocked Weapon"
+        description: "Charge your weapon with electrical energy for a devastating strike"
+        unlockLevel: 30
+        manacost: 35.0
+        cooldown: 30
+        warmupTime: 3
+        lightningDamage: 25.0
+      RocketJump:
+        name: "Rocket Jump"
+        description: "Launch yourself into the air with explosive force"
+        unlockLevel: 25
+        manacost: 25.0
+        cooldown: 15
+        hascasttime: false
+        launchPower: 1.5     # Forward momentum
+        upwardForce: 1.0     # Upward force
+        warmupTime: 0.5      # Seconds to charge
+        explosionDamage: 8.0
+        explosionRadius: 3.0
+        fallProtectionDuration: 3
+      MegaCannon:
+        name: "Mega Cannon"
+        description: "Summon a powerful cannon with 3 explosive shots"
+        unlockLevel: 50
+        manacost: 40.0
+        cooldown: 30
+        projectileDamage: 20.0
+        explosionRadius: 4.0
+        projectileSpeed: 1.5
+        maxAmmo: 3
+        shotCooldown: 1.0        # Seconds between shots
+        cannonDuration: 20       # Seconds before cannon expires
+      Net:
+        name: "Net"
+        description: "Throw a net to immobilize your target"
+        unlockLevel: 35
+        manacost: 40.0
+        cooldown: 20
+        hascasttime: true
+        casttime: 2.0
+        slowintensity: 1
+        istargetedskill: true
+        range: 15.0
+        stunDuration: 1.5
+        warmupTime: 2.0
+      boomstick:
+        name: "Boomstick"
+        description: "Deploy an advanced steam-powered laser rifle that fires bursts of energy projectiles"
+        unlockLevel: 10
+        manacost: 45
+        cooldown: 15
+        damage: 40.0
+        burstcount: 3
+        burstdelay: 0.2
+        projectilespeed: 2.0
+        spread: 0.1
+        isharmful: true
+      gearwingphysician:
+        name: "Gearwing Physician"
+        description: "Summon a mechanical allay that follows and heals you for 20 seconds"
+        unlockLevel: 40
+        manacost: 60
+        cooldown: 30
+        duration: 20.0
+        healamount: 10.0
+        healinterval: 1.0
+        followrange: 3.0
+        isharmful: false
+        istargetedskill: false
+
+  Hunter:
+    tier: MASTER
+    parentClass: Ranger
+    baseHealth: 100
+    baseStamina: 100.0
+    baseMana: 50.0
+    manaRegenPercent: 0.05    # 1% per second
+    staminaRegenPercent: 0.25
+    healthPerLevel: 3.0
+    staminaPerLevel: 5.0
+    manaPerLevel: 2.0
+    usesStamina: true
+    usesMana: true
+    allowedArmor:
+      - LEATHER_CHESTPLATE
+      - LEATHER_LEGGINGS
+      - LEATHER_BOOTS
+      - LEATHER_HELMET
+      - CHAINMAIL_HELMET
+      - CHAINMAIL_CHESTPLATE
+      - CHAINMAIL_LEGGINGS
+      - CHAINMAIL_BOOTS
+    allowedWeapons:
+      - BOW
+      - WOODEN_AXE
+      - STONE_AXE
+      - IRON_AXE
+      - DIAMOND_AXE
+      - NETHERITE_AXE
+    skills:
+      SummonArrow:
+        name: "Summon Arrow"
+        description: "Conjure a stack of magical arrows"
+        unlockLevel: 1
+        manacost: 15.0
+        cooldown: 10
+        hascasttime: false
+        istargetedskill: false
+      BowMastery:
+        name: "Bow Mastery"
+        description: "Passive: Your expertise allows you to shoot arrows with greater force"
+        unlockLevel: 1
+        velocitymultiplier: 1.3    # Arrows fly 30% faster
+      PiercingArrow:
+        name: "Piercing Arrow"
+        description: "Enchant your arrows to pierce through targets and ignore armor"
+        unlockLevel: 40
+        manacost: 35.0
+        cooldown: 20
+        damage: 20.0
+        maxshots: 5
+      SummonPet:
+        name: "Summon Pet"
+        description: "Summon a loyal wolf companion to fight by your side"
+        unlockLevel: 10
+        manacost: 50.0
+        cooldown: 10
+        hascasttime: true
+        casttime: 12
+        slowintensity: 4
+        # Pet specific configurations
+        petHealth: 50.0
+        petDamage: 5.0
+        petMovementSpeed: 0.75
+        petRange: 25.0  # How far the pet will chase targets
+      DismissPet:
+        name: "Dismiss Pet"
+        description: "Send your wolf companion away"
+        unlockLevel: 10
+        manacost: 0
+        cooldown: 10
+        hascasttime: false
+        casttime: 0
+      AimedShot:
+        name: "Aimed Shot"
+        description: "Take careful aim to guarantee your next arrow will strike true"
+        unlockLevel: 30
+        manacost: 30.0
+        cooldown: 15
+        hascasttime: true
+        casttime: 2.0
+        slowintensity: 1
+        damage: 20.0  # Base damage of the aimed shot
+        range: 30
+      Maim:
+        name: "Maim"
+        description: "Strike your target with your axe, maiming them to slow their movement and cause bleeding damage"
+        unlockLevel: 15
+        staminacost: 25.0  # Using stamina since it's a physical melee ability
+        cooldown: 12
+        hascasttime: false  # Instant cast for better melee feel
+        ismeleeskill: true  # This enables melee targeting
+        istargetedskill: true  # Uses targeting system
+        isharmful: true
+        meleerange: 3.0    # Range in blocks
+        damage: 12.0       # Base damage
+        slowduration: 4    # Duration in seconds
+        slowintensity: 2   # Slow level (2 = Slowness II)
+      Foottrap:
+        name: "Foot Trap"
+        description: "Set a concealed trap that roots enemies who trigger it"
+        unlockLevel: 20
+        manacost: 40.0
+        cooldown: 25
+        hascasttime: true
+        casttime: 1.0
+        slowintensity: 1  # Slow during cast
+        istargetedskill: false  # This will be ground-targeted
+        rootduration: 3    # Duration in seconds
+        trapradius: 2.0    # Radius of the trap's trigger area
+        trapduration: 30   # How long the trap remains active (seconds)
+      Disengage:
+        name: "Disengage"
+        description: "Perform an acrobatic backflip, leaping backwards to safety"
+        unlockLevel: 35
+        staminacost: 35.0
+        cooldown: 15
+        hascasttime: false  # Should be instant for smooth combat
+        distance: 15.0      # Base distance in blocks
+        heightMultiplier: 0.8  # Controls arc height
+        particleDensity: 2.0   # Controls how dense the particle trail is
+      Track:
+        name: "Track"
+        description: "Reveal the location of a party member"
+        unlockLevel: 50
+        manacost: 20.0
+        cooldown: 30
+
+#Rogues
+  Buccaneer:
+    tier: MASTER
+    parentClass: Rogue
+    baseHealth: 80
+    baseStamina: 120.0
+    baseMana: 60.0
+    healthRegenPercent: 0.015  # 1.5% per second
+    manaRegenPercent: 0.05    # 5% per second
+    staminaRegenPercent: 0.08
+    healthPerLevel: 2.0
+    staminaPerLevel: 4.0
+    manaPerLevel: 2.0
+    usesMana: true
+    allowedArmor:
+      - LEATHER_HELMET
+      - LEATHER_CHESTPLATE
+      - LEATHER_LEGGINGS
+      - LEATHER_BOOTS
+      - GOLD_HELMET
+      - GOLD_CHESTPLATE
+      - GOLD_LEGGINGS
+      - GOLD_BOOTS
+    allowedWeapons:
+      - WOODEN_SWORD
+      - STONE_SWORD
+      - IRON_SWORD
+      - GOLD_SWORD
+      - DIAMOND_SWORD
+      - NETHERITE_SWORD
+
+    skills:
+      Flintlock:
+        name: "Flintlock"
+        description: "Fire a quick, powerful shot from your flintlock pistol"
+        unlockLevel: 1
+        manacost: 25.0
+        cooldown: 8
+        hascasttime: false
+        damage: 15.0
+        projectileSpeed: 3.0
+        range: 20.0
+      PowderKeg:
+        name: "Powder Keg"
+        description: "Place an explosive barrel that can be detonated by striking it"
+        unlockLevel: 15
+        manacost: 35.0
+        cooldown: 15
+        hascasttime: false
+        damage: 25.0
+        radius: 4.0
+        fuseTime: 100  # 5 seconds (20 ticks per second)
+      Peck:
+        name: "Peck"
+        description: "Send your parrot companion to peck at an enemy's eyes, blinding them"
+        unlockLevel: 35
+        manacost: 25.0
+        cooldown: 12
+        hascasttime: false
+        istargetedskill: true
+        isharmful: true
+        damage: 5.0
+        range: 15.0
+        blindDuration: 3000
+        blindIntensity: 1
+        parrotSpeed: 1.0
+      plunder:
+        name: "Plunder"
+        description: "Steal beneficial effects from your target while dealing damage."
+        unlockLevel: 45
+        manacost: 40
+        cooldown: 15
+        range: 3.0
+        damage: 5.0
+        hascasttime: true
+        casttime: 0.5
+        ismeleeskill: true
+        isharmful: true
+      sliceanddice:
+        name: "Slice and Dice"
+        description: "Perform a rapid series of sword strikes against your target."
+        unlockLevel: 10
+        manacost: 45
+        cooldown: 12
+        range: 3.0
+        damagePerHit: 3.0
+        numberOfSlices: 5
+        timeBetweenSlices: 5
+        hascasttime: true
+        casttime: 0.5
+        ismeleeskill: true
+        isharmful: true
+      deadmanwalking:
+        name: "Dead Man Walking"
+        description: "Call upon the spirits of drowned sailors to hunt your marked prey, revealing their trail and hastening your pursuit."
+        unlockLevel: 40
+        manacost: 35
+        cooldown: 15
+        speedBoostAmount: 0.2
+        trackingDuration: 200
+        trackingParticleSpacing: 0.5
+        istoggleableskill: false
+        istargetedskill: false
+      citrusforge:
+        name: "Citrus Forge"
+        description: "Forge a magical healing fruit infused with solar energy."
+        unlockLevel: 50
+        manacost: 30
+        cooldown: 30
+        defaultFruitType: "healing_orange"
+
+  Ninja:
+    tier: MASTER
+    parentClass: Rogue
+    baseHealth: 90
+    baseStamina: 120.0
+    baseMana: 40.0
+    healthRegenPercent: 0.015  # 1.5% per second
+    manaRegenPercent: 0.01    # 1% per second
+    staminaRegenPercent: 0.25  # 10% per second
+    healthPerLevel: 2.5
+    staminaPerLevel: 4.0
+    manaPerLevel: 1.5
+    usesMana: true
+    usesStamina: true
+    usesToxin: false
+    usesRage: false
+    allowedArmor:
+      - LEATHER_HELMET
+      - LEATHER_CHESTPLATE
+      - LEATHER_LEGGINGS
+      - LEATHER_BOOTS
+      - CHAINMAIL_HELMET
+      - CHAINMAIL_BOOTS
+    allowedWeapons:
+      - WOODEN_SWORD
+      - STONE_SWORD
+      - IRON_SWORD
+      - DIAMOND_SWORD
+      - NETHERITE_SWORD
+      - FROST_SWORD
+      - SHADOW_SLAYER_DAGGER
+    skills:
+      BackFlip:
+        name: "Back Flip"
+        description: "Perform an acrobatic flip backwards to reposition yourself"
+        unlockLevel: 20
+        staminacost: 20.0
+        cooldown: 10
+        hascasttime: false
+        distance: 3.0          # How far backwards to flip
+        height: 1.0           # Height of the flip arc
+        particleDensity: 1.0   # Controls how dense the particle trail is
+      Vanish:
+        name: "Vanish"
+        description: "Become invisible to players and mobs. Breaking stealth or taking damage will reveal you."
+        unlockLevel: 30
+        staminacost: 30.0
+        cooldown: 15
+        detectionrange: 3.0
+        istoggleableskill: true
+        hascasttime: false
+      Kick:
+        name: "Kick"
+        description: "A swift kick that deals damage, silences the target, and interrupts casting."
+        unlockLevel: 1
+        staminacost: 20.0
+        cooldown: 8
+        damage: 5.0
+        silenceduration: 2.0  # Duration in seconds
+        silenceintensity: 1
+        range: 3.0
+        istargetedskill: true
+        hascasttime: false
+        ismeleeskill: true
+      Shuriken:
+        name: "Shuriken"
+        description: "Throw a deadly shuriken that deals damage and causes bleeding."
+        unlockLevel: 10
+        staminacost: 15.0
+        cooldown: 6
+        damage: 8.0
+        bleeddamage: 2.0
+        bleedduration: 3.0  # Duration in seconds
+        bleedticks: 3       # Number of bleed damage ticks
+        projectilespeed: 1.0
+        projectilerange: 20.0
+        istargetedskill: false
+        hascasttime: false
+      SmokeBomb:
+        name: "Smoke Bomb"
+        description: "Throw a smoke bomb at your feet, becoming invisible for a short time. Taking damage breaks the effect."
+        unlockLevel: 15
+        staminacost: 25.0
+        cooldown: 15
+        duration: 5.0  # Duration in seconds
+        hascasttime: false
+      Backstab:
+        name: "Backstab"
+        description: "Passive: Your attacks from behind deal 200% damage."
+        unlockLevel: 1
+        damagemultiplier: 2.0
+      ShadowStrike:
+        name: "Shadow Strike"
+        description: "Strike your target from stealth, dealing damage and stunning them. Can only be used while stealthed."
+        unlockLevel: 35
+        staminacost: 30.0
+        cooldown: 12
+        damage: 20.0
+        stunduration: 1.5     # Duration in seconds
+        range: 6.0
+        istargetedskill: true
+        hascasttime: false
+        ismeleeskill: true
+      ShadowClones:
+        name: "Shadow Clones"
+        description: "Create multiple shadow clones around you"
+        unlockLevel: 50
+        manacost: 0
+        cooldown: 30
+        hascasttime: true
+        casttime: 1.0
+        istargetedskill: false
+        clonecount: 10       # Number of clones to create
+        duration: 30        # How long clones last in seconds
+        radius: 5.0         # Radius of the circle of clones
+      Clone:
+        name: "Clone"
+        description: "Randomly swap places with one of your shadow clones or original position"
+        unlockLevel: 50
+        manacost: 0
+        cooldown: 10
+        hascasttime: false  # Should be instant for fluid gameplay
+        istargetedskill: false
+
+  Renegade:
+    tier: MASTER
+    parentClass: Rogue
+    baseHealth: 85
+    baseStamina: 100.0
+    baseMana: 0
+    healthRegenPercent: 0.015  # 1.5% per second
+    manaRegenPercent: 0.00
+    staminaRegenPercent: 0.25
+    healthPerLevel: 3.5
+    staminaPerLevel: 4.5
+    manaPerLevel: 1.5
+    usesStamina: true
+    allowedArmor:
+      - LEATHER_HELMET
+      - LEATHER_CHESTPLATE
+      - LEATHER_LEGGINGS
+      - LEATHER_BOOTS
+      - CHAINMAIL_CHESTPLATE
+      - CHAINMAIL_BOOTS
+    allowedWeapons:
+      - WOODEN_SWORD
+      - STONE_SWORD
+      - IRON_SWORD
+      - DIAMOND_SWORD
+      - NETHERITE_SWORD
+    skills:
+      SonicWave:
+        name: "Sonic Wave"
+        description: "Launch a piercing wave of sound that marks enemies for Resonating Strike"
+        unlockLevel: 1
+        staminacost: 25.0
+        cooldown: 12
+        hascasttime: false
+        istargetedskill: false
+        damage: 8.0
+        range: 20.0
+        projectilespeed: 1.5
+        markDuration: 6.0  # Duration in seconds the target remains marked
+        width: 2.0        # Width of the wave projectile
+        isPartOne: true   # Indicates this is part 1 of a combo skill
+        particleEffect: "SONIC"
+      ResonatingStrike:
+        name: "Resonating Strike"
+        description: "Dash to a Sonic Wave marked target with a devastating kick. Critical strike against low HP targets"
+        unlockLevel: 10
+        staminacost: 15.0
+        cooldown: 0      # Short cooldown as it requires Sonic Wave setup          hascasttime: false
+        istargetedskill: true
+        damage: 12.0
+        criticalThreshold: 0.3  # Triggers critical hit if target below 30% HP
+        criticalMultiplier: 1.8 # Critical hit deals 180% damage
+        range: 25.0            # Slightly longer than Sonic Wave to ensure you can reach marked targets          requiresMarkedTarget: true  # Can only be used on targets hit by Sonic Wave
+        isPartTwo: true        # Indicates this is part 2 of a combo skill
+      DragonKick:
+        name: "Dragon Kick"
+        description: "Unleash a powerful kick that deals heavy damage and sends enemies flying"
+        unlockLevel: 50
+        staminacost: 35.0
+        cooldown: 35
+        hascasttime: false
+        slowintensity: 4
+        istargetedskill: true
+        damage: 25.0
+        range: 4.0
+        knockbackforce: 2.0    # Strong knockback
+        knockupforce: 0.8      # Slight vertical knockback
+      PhantomRush:
+        name: "Phantom Rush"
+        description: "Shield yourself or a party member, reducing damage taken"
+        unlockLevel: 30
+        staminacost: 20
+        cooldown: 12
+        hascasttime: true
+        casttime: 1.0
+        slowintensity: 4
+        istargetedskill: true
+        isharmful: false
+        shieldduration: 10.0      # Duration of shield in seconds
+        range: 15.0              # Range for targeting party members
+      FivePointPalm:
+        name: "Five Point Palm"
+        description: "Strike vital points, applying stacks that detonate on the fifth hit"
+        unlockLevel: 20
+        staminacost: 20.0
+        cooldown: 12
+        hascasttime: false
+        istargetedskill: true
+        ismeleeskill: true
+        damage: 5.0
+        stackdamage: 3.0
+        range: 3.0
+      SpinningBirdKick:
+        name: "Spinning Bird Kick"
+        description: "Perform a spinning kick that knocks back nearby enemies and avoid damage for 1.5 seconds"
+        unlockLevel: 40
+        staminacost: 40.0
+        cooldown: 12
+        hascasttime: false
+        damage: 10
+        radius: 4.0
+        invulnduration: 1.5
+      GroundBreaker:
+        name: "Ground Breaker"
+        description: "Strike the ground creating a shockwave that damages and staggers enemies"
+        unlockLevel: 25
+        staminacost: 45.0
+        cooldown: 15
+        hascasttime: false
+        damage: 10
+        radius: 8.0
+        knockup: 0.5
+        slowduration: 5.0
+        slowintensity: 4
+
+  Toxicologist:
+    tier: MASTER
+    parentClass: Rogue
+    baseHealth: 90.0
+    baseStamina: 100.0
+    baseMana: 0
+    healthRegenPercent: 0.015  # 1.5% per second
+    manaRegenPercent: 0.00    # 1% per second
+    staminaRegenPercent: 0.10
+    healthPerLevel: 3.0
+    staminaPerLevel: 5.0
+    manaPerLevel: 2.0
+    usesToxin: true
+    allowedArmor:
+      - LEATHER_HELMET
+      - LEATHER_CHESTPLATE
+      - LEATHER_LEGGINGS
+      - LEATHER_BOOTS
+      - CHAINMAIL_LEGGINGS
+      - CHAINMAIL_BOOTS
+    allowedWeapons:
+      - WOODEN_SWORD
+      - STONE_SWORD
+      - IRON_SWORD
+      - DIAMOND_SWORD
+      - NETHERITE_SWORD
+    skills:
+      Envenom:
+        name: "Envenom"
+        description: "Coat your weapon with deadly poison, adding poison damage to each strike"
+        unlockLevel: 1
+        toxincost: 0
+        toxindrain: 1.0
+        cooldown: 1
+        istoggleableskill: true
+        isharmful: true
+        poisonDamage: 10.0
+      Poisonsplash:
+        name: "Poison Splash"
+        description: "Create a zone of toxic poison that damages enemies over time"
+        unlockLevel: 30
+        toxincost: 10.0
+        cooldown: 15
+        poisonDamage: 4.0    # Damage per second
+        poisonDuration: 12   # How long the poison zone lasts in seconds
+        radius: 4.0         # Size of the poison zone
+        hascasttime: false
+        istargetedskill: false
+      toxicstrike:
+        name: "Toxic Strike"
+        description: "Strike your target with toxic energy, dealing damage and stunning them"
+        unlockLevel: 15
+        toxincost: 20.0
+        cooldown: 15
+        ismeleeskill: true        # Indicates this is a melee skill
+        meleerange: 3.0           # Range for melee targeting
+        damage: 5.0               # Base damage
+        stunDuration: 20          # Duration in ticks (40 = 2 seconds)
+        hascasttime: false        # Instant cast for better melee feel
+        istargetedskill: true     # Uses targeting system
+        isharmful: true
+      venomousembrace:
+        name: "Venomous Embrace"
+        description: "Unleash all your toxin as damage and gain speed based on toxin consumed"
+        unlockLevel: 50
+        cooldown: 60
+        toxincost: 0           # Cost is handled by consuming all current toxin
+        ismeleeskill: true     # Mark as melee skill
+        meleerange: 3.0        # Melee range in blocks
+        damagePerToxin: 0.5    # Base damage per point of toxin
+        speedBoostDuration: 3.0 # Duration in seconds
+        speedBoostLevel: 4     # Speed buff level
+        minToxinRequired: 10.0  # Minimum toxin needed to cast
+        maxDamageMultiplier: 2.0 # Maximum damage scaling multiplier
+        hascasttime: false     # Instant cast for better melee feel
+        istargetedskill: true  # Uses targeting system
+        isharmful: true
+      toxintransfusion:
+        name: "Toxin Transfusion"
+        description: "Convert your toxin into healing energy, but become sluggish"
+        unlockLevel: 25
+        cooldown: 1
+        toxindrain: 2.0  # Amount of toxin drained per tick
+        healAmount: 1.0  # Amount of healing done per tick
+        istoggleableskill: true
+        istargetedskill: false
+      poisonshiv:
+        name: "Poison Shiv"
+        description: "Quick poisoned stab at close range"
+        unlockLevel: 10
+        cooldown: 5  # 5 second cooldown for a quick attack
+        toxincost: 10.0  # Lower cost for a basic attack
+        arrowDamage: 30.0  # Base damage
+        arrowVelocity: 4.0  # Very fast for close range
+        poisonDuration: 60  # 3 seconds of poison
+        istargetedskill: false
+      Toxicmist:
+        name: "Toxic Mist"
+        description: "Surround yourself with a toxic cloud that conceals you and debuffs enemies"
+        unlockLevel: 40
+        toxincost: 20.0
+        toxindrain: 2.0
+        cooldown: 30
+        istoggleableskill: true
+        isharmful: true
+
+#Warriors
+  Berserker:
+    tier: MASTER
+    parentClass: Warrior
+    baseHealth: 110
+    baseStamina: 100.0
+    baseMana: 0.0
+    baseRage: 100
+    healthRegenPercent: 0.015  # 1.5% per second
+    manaRegenPercent: 0.0
+    staminaRegenPercent: 0.0
+    healthPerLevel: 4.0
+    staminaPerLevel: 3.0
+    manaPerLevel: 0.0
+    usesRage: true
+    allowedArmor:
+      - IRON_HELMET
+      - IRON_CHESTPLATE
+      - IRON_LEGGINGS
+      - IRON_BOOTS
+      - CHAINMAIL_HELMET
+      - CHAINMAIL_CHESTPLATE
+      - CHAINMAIL_LEGGINGS
+      - CHAINMAIL_BOOTS
+      - DIAMOND_BOOTS
+      - NETHERITE_BOOTS
+    allowedWeapons:
+      - WOODEN_AXE
+      - STONE_AXE
+      - IRON_AXE
+      - DIAMOND_AXE
+      - NETHERITE_AXE
+    skills:
+      ThrowingAxe:
+        name: "Throwing Axe"
+        description: "Throw your axe through enemies and call it back to you"
+        unlockLevel: 1
+        ragecost: 10.0
+        cooldown: 7
+        hascasttime: false
+        istargetedskill: false
+        isharmful: true
+        damage: 15.0
+        projectilespeed: 0.4  # Much slower for better control
+        returnspeed: 0.6      # Slightly faster return
+        maxdistance: 12.0     # Maximum travel distance in blocks
+      Whirlwind:
+        name: "Whirlwind"
+        description: "Spin rapidly with your weapon, damaging all nearby enemies"
+        unlockLevel: 15
+        ragecost: 25.0
+        cooldown: 15
+        hascasttime: false
+        istargetedskill: false
+        isharmful: true
+        damage: 5.0           # Damage per tick
+        radius: 8.0           # Range in blocks
+        duration: 60          # Duration in ticks (3 seconds)
+        damageTickRate: 10    # Apply damage every 10 ticks (0.5 seconds)
+        slowintensity: 2      # Slowness level while spinning
+      Goredrinker:
+        name: "Goredrinker"
+        description: "Enter a blood frenzy, healing for half the damage you deal"
+        unlockLevel: 20
+        ragecost: 20.0
+        cooldown: 12
+        hascasttime: false
+        istargetedskill: false
+        isharmful: false
+        healingpercent: 0.5    # Convert 50% of damage to healing
+        duration: 100          # 5 seconds at 20 ticks/second
+      HeadButt:
+        name: "Head Butt"
+        description: "Ram your head into enemies, slowing them if healthy or stunning them if wounded"
+        unlockLevel: 25
+        ragecost: 20.0
+        cooldown: 25
+        hascasttime: false
+        istargetedskill: true
+        ismeleeskill: true
+        isharmful: true
+        damage: 8.0
+        healththreshold: 0.5      # 50% health threshold
+        slowduration: 60          # 3 seconds (in ticks)
+        slowintensity: 2          # Slowness II
+        stunduration: 40          # 2 seconds (in ticks)
+        range: 3.0                # Melee range in blocks
+      Charge:
+        name: "Charge"
+        description: "Rush towards a target when out of combat, generating rage"
+        unlockLevel: 20
+        ragecost: 0.0
+        cooldown: 0
+        hascasttime: false
+        istargetedskill: true
+        isharmful: true
+        range: 15.0           # Maximum targeting range
+        ragegain: 20.0        # Rage generated on hit
+        movementspeed: 1.0    # Movement speed multiplier
+      Rupture:
+        name: "Rupture"
+        description: "Rupture the target's legs, causing damage as they move"
+        unlockLevel: 50
+        ragecost: 25.0
+        cooldown: 30
+        hascasttime: false
+        istargetedskill: true
+        ismeleeskill: true
+        isharmful: true
+        range: 3.0              # Melee range
+        initialdamage: 5.0      # Initial hit damage
+        damageperblock: 1.0     # Damage per block moved
+        duration: 100           # 5 seconds (in ticks)
+        checkinterval: 10       # Check movement every 0.5 seconds
+      Taunt:
+        name: "Taunt"
+        description: "Provoke your target to attack you"
+        unlockLevel: 40
+        ragecost: 0.0
+        cooldown: 25
+        hascasttime: false
+        istargetedskill: true
+        ismeleeskill: true
+        isharmful: true
+        range: 3.0             # Melee range
+        tauntduration: 60      # 3 seconds (in ticks)
+      Guts:
+        name: "Guts"
+        description: "Refuse to die! Prevents death for 2 seconds"
+        unlockLevel: 30
+        ragecost: 20.0
+        cooldown: 45
+        hascasttime: false
+        istargetedskill: false
+        isharmful: false
+        duration: 40           # 2 seconds in ticks
+
+  Chainwarden:
+    tier: MASTER
+    parentClass: Warrior
+    baseHealth: 120
+    baseStamina: 100.0
+    baseMana: 50.0
+    healthRegenPercent: 0.015  # 1.5% per second
+    manaRegenPercent: 0.05    # 1% per second
+    staminaRegenPercent: 0.25
+    healthPerLevel: 3.0
+    staminaPerLevel: 5.0
+    manaPerLevel: 2.0
+    usesStamina: true
+    usesMana: true
+    allowedArmor:
+      - CHAINMAIL_HELMET
+      - CHAINMAIL_CHESTPLATE
+      - CHAINMAIL_LEGGINGS
+      - CHAINMAIL_BOOTS
+      - DIAMOND_LEGGINGS
+      - NETHERITE_LEGGINGS
+    allowedWeapons:
+      - WOODEN_SWORD
+      - STONE_SWORD
+      - IRON_SWORD
+      - GOLD_SWORD
+      - DIAMOND_SWORD
+      - NETHERITE_SWORD
+    skills:
+      SeizeChain:
+        name: "Seize Chain"
+        description: "Launch a chain that pulls the first enemy hit towards you"
+        unlockLevel: 25
+        manacost: 0
+        staminacost: 20
+        cooldown: 12
+        hascasttime: false
+        istargetedskill: false  # Changed to false since it's a skill shot
+        damage: 5.0
+        projectilespeed: 1.5
+        pullspeed: 1.2
+        chainvisualsspacing: 0.5
+        range: 15.0  # Maximum range in blocks
+      ChainShield:
+        name: "Chain Shield"
+        description: "Summon protective chains that reduce damage and can reflect projectiles"
+        unlockLevel: 35
+        staminacost: 3.0
+        cooldown: 25
+        hascasttime: false
+        istargetedskill: false
+        istoggleableskill: true
+        staminadrain: 3.0
+        damagereduction: 0.25     # Reduces damage by 25%
+        reflectchance: 0.30       # 30% chance to reflect projectiles
+        chainradius: 2.0          # How far the chains orbit
+        particlecount: 20         # Number of particles in the chain effect
+      Lash:
+        name: "Lash"
+        description: "Lash out with chains in a cone, damaging and disarming enemies"
+        unlockLevel: 10
+        staminacost: 25.0
+        cooldown: 12
+        hascasttime: false
+        ismeleeskill: true
+        istargetedskill: false
+        isharmful: true
+        range: 6.0
+        damage: 8.0          # Added damage since we removed root
+        coneangle: 60.0
+        disarmduration: 60   # 3 seconds at 20 ticks/sec
+        chaincount: 5        # Number of chains in the attack
+        chainspacing: 0.5    # Space between chain particles
+      ChainAnchor:
+        name: "Chain Anchor"
+        description: "Launch a chain that anchors to terrain, allowing you to pull yourself up or swing"
+        unlockLevel: 30
+        staminacost: 15.0
+        staminadrain: 2.0
+        cooldown: 15
+        hascasttime: false
+        istargetedskill: false
+        istoggleableskill: true
+        maxanchordistance: 20
+        chainvisualsspacing: 0.5
+        playerpullspeed: 0.6
+        maxduration: 60      # 3 seconds at 20 ticks/sec
+      SoulLink:
+        name: "Soul Link"
+        description: "Create a protective chain link with a party member, sharing their damage"
+        unlockLevel: 50
+        manacost: 30.0
+        cooldown: 45
+        hascasttime: false
+        istargetedskill: false
+        isharmful: false
+        projectilespeed: 1.0
+        chainvisualsspacing: 0.5
+        linkduration: 600    # 30 seconds at 20 ticks/sec
+      Deathflail:
+        name: "Death Flail"
+        description: "Unleash deadly chains in a wide circle around you"
+        unlockLevel: 20
+        staminacost: 35.0
+        cooldown: 15
+        hascasttime: false
+        istargetedskill: false
+        isharmful: true
+        damage: 12.0
+        radius: 5.0          # Range in blocks
+        chainspacing: 0.5    # Space between particles
+        chaincount: 24       # Number of chains to create
+      MysticChainStrike:
+        name: "Mystic Chain Strike"
+        description: "Strike your target with magic-infused chains"
+        unlockLevel: 1
+        manacost: 25.0
+        cooldown: 8
+        hascasttime: false
+        ismeleeskill: true
+        istargetedskill: true
+        isharmful: true
+        damage: 12.0
+        range: 3.0
+
+  Guardian:
+    tier: MASTER
+    parentClass: Warrior
+    baseHealth: 130
+    baseStamina: 100.0
+    baseMana: 10.0
+    healthRegenPercent: 0.02   # 2% per second
+    manaRegenPercent: 0.06    # 5% per second
+    staminaRegenPercent: 0.05
+    healthPerLevel: 5.0       # High health per level
+    staminaPerLevel: 3.0
+    manaPerLevel: 3.0
+    usesMana: true
+    allowedArmor:
+      - IRON_HELMET
+      - IRON_CHESTPLATE
+      - IRON_LEGGINGS
+      - IRON_BOOTS
+      - DIAMOND_CHESTPLATE
+      - NETHERITE_CHESTPLATE
+    allowedWeapons:
+      - WOODEN_SWORD
+      - STONE_SWORD
+      - SHIELD
+    skills:
+      Bulwark:
+        name: "Bulwark"
+        description: "Become an immovable fortress, greatly reducing all damage taken while severely slowing your movement"
+        unlockLevel: 1
+        manacost: 30.0
+        cooldown: 25
+        hascasttime: false
+        istargetedskill: false
+        duration: 10          # Duration in seconds
+        damagereduction: 0.5  # 80% damage reduction
+        slowintensity: 6      # Slowness level
+      ShieldBash:
+        name: "Shield Bash"
+        description: "Slam your shield into an enemy, stunning them and dealing damage"
+        unlockLevel: 10
+        manacost: 20.0
+        cooldown: 20
+        hascasttime: false
+        istargetedskill: true
+        ismeleeskill: true
+        range: 3.0
+        damage: 8.0
+        stunduration: 2000      # 2 second stun
+        knockback: 1.0          # Knockback strength
+      BannerOfProtection:
+        name: "Banner of Protection"
+        description: "Summon a protective banner that grants resistance to nearby allies"
+        unlockLevel: 25
+        manacost: 40.0
+        cooldown: 30
+        hascasttime: true
+        casttime: 1.2
+        istargetedskill: false
+        range: 20.0           # Effect radius
+        duration: 15          # Duration in seconds
+        resistancelevel: 1    # Resistance I
+      surge:
+        name: "Surge"
+        description: "Deploy a banner that pulses with force, knocking back and damaging nearby enemies"
+        unlockLevel: 35
+        manacost: 25.0
+        cooldown: 25
+        duration: 10
+        damage: 5.0
+        knockbackstrength: 1.5
+        pulseinterval: 1.0
+        range: 8.0
+        hascasttime: false
+      ram:
+        name: "Ram"
+        description: "Charge at your target with devastating force, knocking them back"
+        unlockLevel: 40
+        manacost: 35.0
+        cooldown: 12
+        damage: 12.0
+        knockbackstrength: 1.0
+        chargespeed: 1.0
+        maxchargeticks: 10
+        range: 15.0
+        hascasttime: false
+        istargetedskill: true
+        isharmful: true
+      magicward:
+        name: "Magic Ward"
+        description: "Create a magical barrier that reduces incoming magic damage by half"
+        unlockLevel: 1
+        manacost: 45.0
+        cooldown: 25
+        duration: 10
+        damagereduction: 0.5
+        hascasttime: false
+      unbreakable:
+        name: "Unbreakable"
+        description: "Become immune to all forms of crowd control for a short time"
+        unlockLevel: 50
+        manacost: 60.0
+        cooldown: 40
+        duration: 10
+        hascasttime: false
+
+  SkyKnight:
+    tier: MASTER
+    parentClass: Warrior
+    baseHealth: 110
+    baseStamina: 100.0
+    baseMana: 0
+    healthRegenPercent: 0.015  # 1.5% per second
+    staminaRegenPercent: 0.25
+    healthPerLevel: 3.0
+    staminaPerLevel: 5.0
+    manaPerLevel: 0
+    usesStamina: true
+    allowedArmor:
+      - IRON_HELMET
+      - IRON_LEGGINGS
+      - IRON_BOOTS
+      - DIAMOND_HELMET
+      - NETHERITE_HELMET
+    allowedWeapons:
+      - WOODEN_SHOVEL
+      - STONE_SHOVEL
+      - IRON_SHOVEL
+      - DIAMOND_SHOVEL
+      - NETHERITE_SHOVEL
+      - SHADOW_SLAYER_SPEAR
+    skills:
+      cloudborn:
+        name: "Cloudborn"
+        description: "Passive: Grants limited flight capability using elytra mechanics. Flight time resets upon landing."
+        unlockLevel: 1
+        istoggleableskill: false
+        hascasttime: false
+      AerialGrasp:
+        name: "Aerial Grasp"
+        description: "Grab an enemy, lift them up, and throw them through the air"
+        unlockLevel: 50
+        staminacost: 35.0
+        cooldown: 15
+        hascasttime: false
+        istargetedskill: true
+        isharmful: true
+        ismeleeskill: true       # Mark as melee skill
+        meleerange: 3.0          # Set melee range
+        throwdamage: 10.0        # Damage dealt when thrown
+        throwforce: 2.0          # How hard to throw the target
+        lifttime: 0.5           # Time in seconds to lift before throwing
+      DiveBomb:
+        name: "Dive Bomb"
+        description: "While gliding, dive towards the ground to create a devastating impact. Damage increases with height."
+        unlockLevel: 30
+        staminacost: 40.0
+        cooldown: 20
+        hascasttime: false
+        isharmful: true
+        basedamage: 10.0        # Base damage on impact
+        heightmultiplier: 0.5   # Additional damage per block of height
+        maxheightbonus: 20.0    # Maximum bonus damage from height
+        radius: 4.0             # Impact radius
+        knockbackstrength: 1.0  # Strength of knockback
+        divespeed: 2.0          # Speed of the dive
+      WindSpear:
+        name: "Wind Spear"
+        description: "Launch a spear of wind that deals increased damage while gliding"
+        unlockLevel: 5
+        staminacost: 25.0
+        cooldown: 8
+        hascasttime: false
+        istargetedskill: false  # Changed to false since it's now a skill shot
+        isharmful: true
+        basedamage: 8.0         # Base damage
+        glidingmultiplier: 1.75 # Damage multiplier when gliding
+        knockbackstrength: 0.5  # Knockback force
+        skillshotrange: 12.0     # How far the spear travels
+        skillshotwidth: 1.5     # Width of the hit detection
+        skillshotspeed: 1.5     # How fast the spear travels
+      CloudBounce:
+        name: "Cloud Bounce"
+        description: "While gliding, bounce high into the air with fall protection."
+        unlockLevel: 35
+        staminacost: 30.0
+        cooldown: 12
+        hascasttime: false
+        bounceheight: 15.0    # Height in blocks to bounce
+      SpiralPierce:
+        name: "Spiral Pierce"
+        description: "Drill through the air towards your target with a spiraling strike. Deals bonus damage while gliding."
+        unlockLevel: 25
+        staminacost: 35.0
+        cooldown: 12
+        hascasttime: false
+        istargetedskill: true
+        isharmful: true
+        range: 20.0            # Maximum targeting range
+        damage: 12.0           # Base damage
+        glidingmultiplier: 1.5 # Damage multiplier when gliding
+        drillspeed: 1.2        # Speed of the drill animation
+        spiralradius: 0.5      # Radius of the spiral effect
+      WingSlap:
+        name: "Wing Slap"
+        description: "Slap your enemy with your wings, knocking them away"
+        unlockLevel: 40
+        staminacost: 25.0
+        cooldown: 10
+        hascasttime: false
+        istargetedskill: true
+        ismeleeskill: true
+        isharmful: true
+        meleerange: 3.0           # Melee range in blocks
+        damage: 6.0              # Base damage
+        knockbackstrength: 2.0    # Horizontal knockback force
+        upwardknockback: 0.3     # Upward knockback component
+
+#Experience for all mobs/bosses
+# Experience Configuration
+experience:
+  expMultiplier: 1.5
+  mobExp:
+    # Ambient Mobs (Very Low Risk)
+    BAT: 2
+    # Passive Mobs (Low Risk)
+    CHICKEN: 3
+    RABBIT: 3
+    PIG: 4
+    SHEEP: 4
+    COW: 5
+    DONKEY: 5
+    HORSE: 5
+    MULE: 5
+    LLAMA: 6
+    TRADER_LLAMA: 6
+    PANDA: 6
+    TURTLE: 6
+    AXOLOTL: 7
+    GOAT: 8
+    CAMEL: 8
+    SNIFFER: 8
+    # Aquatic Mobs
+    COD: 4
+    SALMON: 4
+    TROPICAL_FISH: 4
+    SQUID: 5
+    GLOW_SQUID: 6
+    PUFFERFISH: 8
+    DOLPHIN: 15
+    GUARDIAN: 30
+    ELDER_GUARDIAN: 100
+    # Neutral Mobs (Medium Risk)
+    SILVERFISH: 10
+    STRIDER: 10
+    WOLF: 12
+    BEE: 12
+    SPIDER: 15
+    ZOMBIE: 15
+    ENDERMITE: 15
+    SKELETON: 18
+    STRAY: 20
+    HUSK: 20
+    DROWNED: 22
+    CAVE_SPIDER: 22
+    POLAR_BEAR: 25
+    CREEPER: 25
+    PIGLIN: 25
+    ZOMBIFIED_PIGLIN: 28
+    # Hostile Mobs (High Risk)
+    SLIME: 15        # Base value, larger ones give more
+    MAGMA_CUBE: 18   # Nether variant, more dangerous
+    PHANTOM: 30
+    BLAZE: 35
+    WITCH: 35
+    HOGLIN: 35
+    GHAST: 40
+    ENDERMAN: 40
+    ZOGLIN: 40
+    VINDICATOR: 40
+    SHULKER: 45
+    WITHER_SKELETON: 45
+    PIGLIN_BRUTE: 45
+    IRON_GOLEM: 50
+    RAVAGER: 80
+    # Elite Mobs (Very High Risk)
+    EVOKER: 75
+    WARDEN: 200
+    # Boss Tier
+    WITHER: 500
+    ENDER_DRAGON: 1000
+    # Raid Specific Mobs
+    PILLAGER: 30
+    ILLUSIONER: 60
+    VEX: 25          # Small but dangerous in numbers
+
+
+weapons:
+  WOODEN_SWORD:
+    meleeDamage: 4.0
+    name: "Wooden Sword"
+
+  STONE_SWORD:
+    meleeDamage: 5.0
+    name: "Stone Sword"
+
+  IRON_SWORD:
+    meleeDamage: 6.0
+    name: "Iron Sword"
+
+  DIAMOND_SWORD:
+    meleeDamage: 7.0
+    name: "Diamond Sword"
+
+  NETHERITE_SWORD:
+    meleeDamage: 8.0
+    name: "Netherite Sword"
+
+  WOODEN_AXE:
+    meleeDamage: 5.0
+    name: "Wooden Axe"
+
+  STONE_AXE:
+    meleeDamage: 6.0
+    name: "Stone Axe"
+
+  IRON_AXE:
+    meleeDamage: 7.0
+    name: "Iron Axe"
+
+  DIAMOND_AXE:
+    meleeDamage: 8.0
+    name: "Diamond Axe"
+
+  NETHERITE_AXE:
+    meleeDamage: 9.0
+    name: "Netherite Axe"
+
+  WOODEN_SHOVEL:
+    meleeDamage: 5.0
+    name: "Wooden Shovel"
+
+  STONE_SHOVEL:
+    meleeDamage: 6.0
+    name: "Stone Shovel"
+
+  IRON_SHOVEL:
+    meleeDamage: 7.0
+    name: "Iron Shovel"
+
+  DIAMOND_SHOVEL:
+    meleeDamage: 8.0
+    name: "Diamond Shovel"
+
+  NETHERITE_SHOVEL:
+    meleeDamage: 9.0
+    name: "Netherite Shovel"
+
+  WOODEN_HOE:
+    meleeDamage: 1.0
+    name: "Wooden Hoe"
+
+  STONE_HOE:
+    meleeDamage: 2.0
+    name: "Stone Hoe"
+
+  IRON_HOE:
+    meleeDamage: 3.0
+    name: "Iron Hoe"
+
+  DIAMOND_HOE:
+    meleeDamage: 4.0
+    name: "Diamond Hoe"
+
+  NETHERITE_HOE:
+    meleeDamage: 5.0
+    name: "Netherite Hoe"
+
+  STICK:  # For Fire Staff
+    meleeDamage: 3.0
+    name: "Fire Staff"
+
+  BONE:  # For Training Stick
+    meleeDamage: 2.0
+    name: "Training Stick"
+
+  SNOWBALL:
+    meleeDamage: 3.0
+    name: "Snow Globe"
+
+  ARROW:
+    meleeDamage: 0.5
+    projectileDamage: 8.0
+    name: "Arrow"
+
+  SHIELD:
+    meleeDamage: 6.0
+    name: "Shield"
+
+  # Music Discs
+  MUSIC_DISC_13:
+    meleeDamage: 5.0
+    name: "Music Disc 13"
+
+  MUSIC_DISC_CAT:
+    meleeDamage: 5.0
+    name: "Music Disc Cat"
+
+  MUSIC_DISC_BLOCKS:
+    meleeDamage: 5.0
+    name: "Music Disc Blocks"
+
+  MUSIC_DISC_CHIRP:
+    meleeDamage: 5.0
+    name: "Music Disc Chirp"
+
+  MUSIC_DISC_FAR:
+    meleeDamage: 5.0
+    name: "Music Disc Far"
+
+  MUSIC_DISC_MALL:
+    meleeDamage: 5.0
+    name: "Music Disc Mall"
+
+  MUSIC_DISC_MELLOHI:
+    meleeDamage: 5.0
+    name: "Music Disc Mellohi"
+
+  MUSIC_DISC_STAL:
+    meleeDamage: 5.0
+    name: "Music Disc Stal"
+
+  MUSIC_DISC_STRAD:
+    meleeDamage: 5.0
+    name: "Music Disc Strad"
+
+  MUSIC_DISC_WARD:
+    meleeDamage: 5.0
+    name: "Music Disc Ward"
+
+  MUSIC_DISC_11:
+    meleeDamage: 5.0
+    name: "Music Disc 11"
+
+  MUSIC_DISC_WAIT:
+    meleeDamage: 5.0
+    name: "Music Disc Wait"
+
+  MUSIC_DISC_OTHERSIDE:
+    meleeDamage: 5.0
+    name: "Music Disc Otherside"
+
+  MUSIC_DISC_5:
+    meleeDamage: 5.0
+    name: "Music Disc 5"
+
+  MUSIC_DISC_PIGSTEP:
+    meleeDamage: 5.0
+    name: "Music Disc Pigstep"
+
+  MUSIC_DISC_RELIC:
+    meleeDamage: 5.0
+    name: "Music Disc Relic"
+
+  # Custom weapons
+  PAPER:  # For Resin Sword
+    meleeDamage: 15.0
+    attackSpeed: 1.6
+    name: "Resin Sword"
+
+  FEATHER:  # For Resin Axe
+    meleeDamage: 12.0
+    attackSpeed: 1.0
+    name: "Resin Axe"
+#Frost set
+  FROST_SWORD:
+    material: DIAMOND_SWORD
+    model-data: 10000  # ItemsAdder assigned model data
+    meleeDamage: 10.0  # Set appropriate damage value
+    name: "Frost Hunter Sword"
+#Shadow set
+  SHADOW_SLAYER_SCYTHE:
+    material: DIAMOND_SWORD
+    model-data: 10016     # From the debug output (10016.01 is read as 10016)
+    meleeDamage: 20.0     # You need to decide this value based on weapon balance
+    attackSpeed: 2.5      # You need to decide this value
+    name: "Shadow Slayer Scythe"
+    lore:
+      - "A deadly scythe that harvests souls"  # Optional lore text
+
+  SHADOW_SLAYER_SPEAR:
+    material: DIAMOND_SWORD
+    model-data: 10017       # From the debug output (10017.01 is read as 10017)
+    meleeDamage: 11.0       # You can adjust this damage value for balance
+    attackSpeed: 1.4        # Suggestion: spears typically have faster attack speed
+    name: "Shadow Slayer Spear"
+    lore:
+      - "A spear forged from shadow essence"  # Optional flavor text
+
+  SHADOW_SLAYER_DAGGER:
+    material: DIAMOND_SWORD
+    model-data: 10011
+    meleeDamage: 9.0         # Lower damage than a sword but faster
+    attackSpeed: 2.0         # Faster attack speed for a dagger
+    name: "Shadow Slayer Dagger"
+    lore:
+      - "§7A swift dagger forged from shadow essence"
+      - "§7Strikes with deadly precision"
+
+potion-system:
+  custom-potions:
+    # Mana Potions
+    minor_mana_potion:
+      name: "Minor Mana Potion"
+      description: "Restores a small amount of mana"
+      resource-type: MANA
+      amount: 50
+      cooldown: 20
+      color: BLUE
+      particle: SPELL_WITCH
+      sound: ENTITY_WITCH_DRINK
+      crafting:
+        ingredient: LAPIS_LAZULI
+
+    greater_mana_potion:
+      name: "Greater Mana Potion"
+      description: "Restores a large amount of mana"
+      resource-type: MANA
+      amount: 150
+      cooldown: 45
+      color: BLUE
+      particle: SPELL_WITCH
+      sound: ENTITY_WITCH_DRINK
+      model-data: 2
+      crafting:
+        ingredient: DIAMOND
+
+    # Stamina Potions
+    minor_stamina_potion:
+      name: "Minor Stamina Potion"
+      description: "Restores a small amount of stamina"
+      resource-type: STAMINA
+      amount: 40
+      cooldown: 15
+      color: GREEN
+      particle: VILLAGER_HAPPY
+      sound: ENTITY_PLAYER_BREATH
+      crafting:
+        ingredient: SUGAR
+
+    greater_stamina_potion:
+      name: "Greater Stamina Potion"
+      description: "Restores a large amount of stamina"
+      resource-type: STAMINA
+      amount: 120
+      cooldown: 35
+      color: GREEN
+      particle: VILLAGER_HAPPY
+      sound: ENTITY_PLAYER_BREATH
+      crafting:
+        ingredient: EMERALD
+
+    # Rage Potions
+    minor_rage_potion:
+      name: "Minor Rage Potion"
+      description: "Grants a small amount of rage"
+      resource-type: RAGE
+      amount: 25
+      cooldown: 30
+      color: RED
+      particle: FLAME
+      sound: ENTITY_ENDER_DRAGON_GROWL
+      crafting:
+        ingredient: BLAZE_POWDER
+
+    greater_rage_potion:
+      name: "Greater Rage Potion"
+      description: "Grants a large amount of rage"
+      resource-type: RAGE
+      amount: 75
+      cooldown: 60
+      color: RED
+      particle: FLAME
+      sound: ENTITY_ENDER_DRAGON_GROWL
+      crafting:
+        ingredient: BLAZE_ROD
+
+    # Toxin Potions
+    minor_toxin_potion:
+      name: "Minor Toxin Potion"
+      description: "Restores a small amount of toxin"
+      resource-type: TOXIN
+      amount: 30
+      cooldown: 25
+      color: PURPLE
+      particle: DRAGON_BREATH
+      sound: ENTITY_SPIDER_AMBIENT
+      crafting:
+        ingredient: SPIDER_EYE
+
+    greater_toxin_potion:
+      name: "Greater Toxin Potion"
+      description: "Restores a large amount of toxin"
+      resource-type: TOXIN
+      amount: 90
+      cooldown: 50
+      color: PURPLE
+      particle: DRAGON_BREATH
+      sound: ENTITY_SPIDER_AMBIENT
+      crafting:
+        ingredient: FERMENTED_SPIDER_EYE
+# Potion Combat Configuration
+potion-combat:
+  default-cooldown: 120       # Default cooldown for thrown potions in seconds
+  drinkable-cooldown: 120      # Default cooldown for drinkable potions in seconds
+  combat-duration: 10        # How long combat lasts after using a harmful potion
+
+  # Cooldowns for specific potion effect types (in seconds)
+  cooldowns:
+    HARM: 120                 # Instant damage
+    POISON: 120               # Poison
+    WITHER: 120               # Wither
+    BLINDNESS: 120            # Blindness
+    WEAKNESS: 120             # Weakness
+    SLOW: 120                 # Slowness
+
+    # Beneficial effect cooldowns
+    REGENERATION: 120         # Regeneration
+    DAMAGE_RESISTANCE: 120    # Resistance
+    FIRE_RESISTANCE: 120      # Fire resistance
+    INCREASE_DAMAGE: 120      # Strength
+    SPEED: 120                # Speed
+    INVISIBILITY: 120         # Invisibility
+
+  # Effects categorized as harmful (puts player in combat if affects enemy)
+  harmful-effects:
+    - HARM
+    - POISON
+    - WITHER
+    - BLINDNESS
+    - WEAKNESS
+    - SLOW
+    - HUNGER
+    - CONFUSION
+
+  # Effects categorized as beneficial (won't affect enemies)
+  beneficial-effects:
+    - REGENERATION
+    - DAMAGE_RESISTANCE
+    - FIRE_RESISTANCE
+    - INCREASE_DAMAGE
+    - SPEED
+    - HEAL
+    - INVISIBILITY
+    - SATURATION
+    - ABSORPTION
+    - HEALTH_BOOST
+#Bucs healing fruit config
+citrus-forge:
+  fruits:
+    healing_orange:
+      name: "§6Sunforged Orange"
+      description: "A citrus fruit infused with solar energy"
+      healAmount: 50.0
+      cooldown: 30  # seconds
+#Chat config
+chat:
+  channels:
+    GLOBAL:
+      color: GRAY
+      prefix: "[Global]"
+    LOCAL:
+      color: WHITE
+      prefix: "[Local]"
+      range: 50
+    HELP:
+      color: AQUA
+      prefix: "[Help]"
+    TRADE:
+      color: GOLD
+      prefix: "[Trade]"
+    LFG:
+      color: LIGHT_PURPLE
+      prefix: "[LFG]"
+    RECRUITMENT:
+      color: BLUE
+      prefix: "[Recruit]"
+    SHOUT:
+      color: RED
+      prefix: "[Shout]"
+      range: 150
+
+    #hud
+    use-mythic-hud: true
+
+    #party
+    use-parties-plugin: false
+
