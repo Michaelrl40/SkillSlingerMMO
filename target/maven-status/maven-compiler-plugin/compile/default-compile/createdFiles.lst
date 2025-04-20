@@ -7,6 +7,7 @@ com\michael\mmorpg\managers\AbsorptionShieldManager.class
 com\michael\mmorpg\skills\frostmage\IceBlockSkill.class
 com\michael\mmorpg\skills\druid\PandaFormSkill.class
 com\michael\mmorpg\dungeon\DungeonMaxTimeCommand.class
+com\michael\mmorpg\listeners\ShieldListener$1.class
 com\michael\mmorpg\listeners\CombatPotionListener$2.class
 com\michael\mmorpg\deathchest\DeathChestCommand.class
 com\michael\mmorpg\listeners\MegaCannonListener.class
@@ -30,7 +31,11 @@ com\michael\mmorpg\skills\hunter\FootTrapSkill.class
 com\michael\mmorpg\skills\arcanist\ArcaneMissilesSkill$1$1.class
 com\michael\mmorpg\skills\bandolier\PushOffSkill$1.class
 com\michael\mmorpg\skills\skyknight\WindSpearSkill.class
+com\michael\mmorpg\guild\GuildHall$ChunkPosition.class
+com\michael\mmorpg\skills\druid\RebirthSkill.class
 com\michael\mmorpg\skills\toxicologist\ToxicMistSkill$1.class
+com\michael\mmorpg\listeners\BandolierArrowListener$2.class
+com\michael\mmorpg\skills\skyknight\CloudbornSkill.class
 com\michael\mmorpg\skills\bandolier\RollRightSkill.class
 com\michael\mmorpg\managers\BankManager$BankAccount.class
 com\michael\mmorpg\skills\ninja\BackflipSkill$2.class
@@ -43,7 +48,9 @@ com\michael\mmorpg\skills\berserker\TauntSkill.class
 com\michael\mmorpg\skills\darkblade\NightmareSkill.class
 com\michael\mmorpg\listeners\EnderArrowListener$1.class
 com\michael\mmorpg\skills\windwaker\SlipstreamSkill$1.class
+com\michael\mmorpg\skills\frostmage\IceBarrageSkill$1.class
 com\michael\mmorpg\listeners\ShieldEquipListener.class
+com\michael\mmorpg\skills\druid\RebirthSkill$1.class
 com\michael\mmorpg\skills\druid\RegrowthSkill.class
 com\michael\mmorpg\skills\guardian\SurgeSkill.class
 com\michael\mmorpg\skills\toxicologist\ToxicMistSkill.class
@@ -57,6 +64,7 @@ com\michael\mmorpg\skills\chainwarden\DeathFlailSkill$1.class
 com\michael\mmorpg\skills\arcanist\SpawnPortalSkill$1.class
 com\michael\mmorpg\title\Title$TitleCategory.class
 com\michael\mmorpg\skills\arcanist\SpawnPortalSkill$2$1$1.class
+com\michael\mmorpg\skills\windwaker\UpdraftSkill$1.class
 com\michael\mmorpg\skills\unused\CrushingWaveSkill.class
 com\michael\mmorpg\skills\hunter\SummonPetSkill.class
 com\michael\mmorpg\skills\darkblade\ShadowBallSkill.class
@@ -100,6 +108,7 @@ com\michael\mmorpg\skills\arcanist\PolymorphSkill.class
 com\michael\mmorpg\skills\chainwarden\MysticChainStrikeSkill.class
 com\michael\mmorpg\skills\windwaker\WindChopSkill$2.class
 com\michael\mmorpg\skills\buccaneer\FlintLockSkill$1.class
+com\michael\mmorpg\skills\renegade\DragonKickSkill$2.class
 com\michael\mmorpg\skills\bard\ManaSongSkill$1.class
 com\michael\mmorpg\skills\frostmage\IceShieldSkill.class
 com\michael\mmorpg\skills\ninja\ShurikenSkill$3.class
@@ -123,9 +132,12 @@ com\michael\mmorpg\handlers\ShieldHandler.class
 com\michael\mmorpg\skills\chronomancer\TemporalExileSkill.class
 com\michael\mmorpg\skills\frostmage\FrostWalkSkill$1.class
 com\michael\mmorpg\skills\hunter\FootTrapSkill$1.class
+com\michael\mmorpg\listeners\PlayerListener.class
 com\michael\mmorpg\skills\ninja\BackflipSkill.class
 com\michael\mmorpg\skills\priest\RebukeSkill$2.class
+com\michael\mmorpg\guild\Guild.class
 com\michael\mmorpg\skills\arcanist\ArcaneMissilesSkill$3.class
+com\michael\mmorpg\guild\GuildManager.class
 com\michael\mmorpg\managers\PotionCraftingManager.class
 com\michael\mmorpg\skills\elementalranger\GrandTreeSkill.class
 com\michael\mmorpg\skills\guardian\SurgeSkill$2$1.class
@@ -166,6 +178,7 @@ com\michael\mmorpg\skills\engineer\MegaCannonSkill$1.class
 com\michael\mmorpg\skills\windwaker\GaleForceSkill$1.class
 com\michael\mmorpg\skills\engineer\AutoTurretSkill.class
 com\michael\mmorpg\skills\hunter\MaimSkill.class
+com\michael\mmorpg\models\classes\FrostMage.class
 com\michael\mmorpg\skills\arcanist\GroupTeleportSkill.class
 com\michael\mmorpg\title\Title.class
 com\michael\mmorpg\skills\engineer\BoomstickSkill$1.class
@@ -183,6 +196,7 @@ com\michael\mmorpg\skills\bard\ManaSongSkill.class
 com\michael\mmorpg\skills\bard\ResonantShieldSkill.class
 com\michael\mmorpg\chatclasses\ChatManager.class
 com\michael\mmorpg\skills\toxicologist\ToxinTransfusionSkill$1.class
+com\michael\mmorpg\skills\hunter\PiercingArrowSkill.class
 com\michael\mmorpg\skills\priest\SoulWardSkill$1.class
 com\michael\mmorpg\skills\elementalranger\NetherShotSkill$2.class
 com\michael\mmorpg\skills\chainwarden\SoulLinkSkill$2.class
@@ -220,6 +234,7 @@ com\michael\mmorpg\skills\chainwarden\LashSkill$1$1.class
 com\michael\mmorpg\deathchest\DeathChestManager.class
 com\michael\mmorpg\managers\SkillManager.class
 com\michael\mmorpg\skills\skyknight\AerialGraspSkill.class
+com\michael\mmorpg\listeners\OverclockedWeaponListener.class
 com\michael\mmorpg\listeners\PowderKegListener.class
 com\michael\mmorpg\managers\CampfireManager.class
 com\michael\mmorpg\listeners\ChainLinkDamageListener.class
@@ -240,10 +255,12 @@ com\michael\mmorpg\skills\druid\RootSkill.class
 com\michael\mmorpg\chatclasses\DiscordIntegration.class
 com\michael\mmorpg\models\classes\Druid.class
 com\michael\mmorpg\skills\unused\CrushingWaveSkill$1.class
+com\michael\mmorpg\commands\SellGoldCommand.class
 com\michael\mmorpg\skills\guardian\BulwarkSkill$1.class
 com\michael\mmorpg\managers\BankManager.class
 com\michael\mmorpg\commands\MaxLevelCommand$1.class
 com\michael\mmorpg\listeners\CombatListener$1.class
+com\michael\mmorpg\skills\skyknight\SpiralPierceSkill.class
 com\michael\mmorpg\models\classes\Chronomancer.class
 com\michael\mmorpg\skills\engineer\AutoTurretSkill$2.class
 com\michael\mmorpg\skills\elementalranger\EnderArrowSkill$1.class
@@ -256,8 +273,10 @@ com\michael\mmorpg\listeners\CitrusForgeListener.class
 com\michael\mmorpg\listeners\DisengageListener.class
 com\michael\mmorpg\skills\renegade\FivePointPalmSkill.class
 com\michael\mmorpg\skills\skyknight\AerialGraspSkill$GraspData.class
+com\michael\mmorpg\skills\darkblade\SoulSiphonSkill$1.class
 com\michael\mmorpg\skills\chainwarden\ChainShieldSkill$1.class
 com\michael\mmorpg\deathchest\DeathChestListener$1.class
+com\michael\mmorpg\guild\GuildCommand.class
 com\michael\mmorpg\models\classes\ElementalRanger.class
 com\michael\mmorpg\skills\hunter\AimedShotSkill.class
 com\michael\mmorpg\skills\buccaneer\CitrusForgeSkill.class
@@ -272,6 +291,8 @@ com\michael\mmorpg\managers\CitrusForgeManager.class
 com\michael\mmorpg\skills\bard\LullabySkill.class
 com\michael\mmorpg\skills\frostmage\BlizzardSkill$1.class
 com\michael\mmorpg\skills\bard\WarChantSkill.class
+com\michael\mmorpg\graveyard\GraveyardCommand.class
+com\michael\mmorpg\skills\ninja\SmokeBombSkill$1.class
 com\michael\mmorpg\models\classes\Vagrant.class
 com\michael\mmorpg\skills\darkblade\NightmareSkill$1.class
 com\michael\mmorpg\commands\ClassCommand.class
@@ -320,6 +341,7 @@ com\michael\mmorpg\skills\druid\HealingTouchSkill.class
 com\michael\mmorpg\skills\frostmage\SummonIceBlockSkill.class
 com\michael\mmorpg\skills\buccaneer\SliceAndDiceSkill$1SliceSequence.class
 com\michael\mmorpg\skills\priest\SoulWardSkill$2.class
+com\michael\mmorpg\guild\GuildListener.class
 com\michael\mmorpg\skills\arcanist\ArcaneMissilesSkill$2.class
 com\michael\mmorpg\skills\windwaker\SlipstreamSkill$2.class
 com\michael\mmorpg\skills\buccaneer\SliceAndDiceSkill$1$1.class
@@ -330,7 +352,9 @@ com\michael\mmorpg\skills\engineer\OverclockedWeaponSkill.class
 com\michael\mmorpg\skills\engineer\GearwingPhysicianSkill.class
 com\michael\mmorpg\skills\ninja\ShurikenSkill$2.class
 com\michael\mmorpg\skills\buccaneer\PeckSkill$2.class
+com\michael\mmorpg\guild\GuildHall.class
 com\michael\mmorpg\skills\renegade\GroundBreakerSkill.class
+com\michael\mmorpg\skills\frostmage\IceBarrageSkill$2.class
 com\michael\mmorpg\skills\chainwarden\SoulLinkSkill$1.class
 com\michael\mmorpg\skills\guardian\BannerOfProtectionSkill.class
 com\michael\mmorpg\skills\bard\HealingHymnSkill$1.class
@@ -359,6 +383,7 @@ com\michael\mmorpg\managers\SkillListManager.class
 com\michael\mmorpg\skills\berserker\HeadButtSkill.class
 com\michael\mmorpg\managers\DamageDisplayManager$DamageType.class
 com\michael\mmorpg\skills\renegade\PhantomRushSkill$2.class
+com\michael\mmorpg\skills\skyknight\SpiralPierceSkill$1.class
 com\michael\mmorpg\skills\chainwarden\DeathFlailSkill.class
 com\michael\mmorpg\skills\skyknight\WindSpearSkill$1.class
 com\michael\mmorpg\deathchest\DeathChestListener.class
@@ -380,9 +405,11 @@ com\michael\mmorpg\skills\druid\CamouflageSkill$1.class
 com\michael\mmorpg\skills\zcommon\ForageSkill.class
 com\michael\mmorpg\skills\unused\RisingDragonStrikeSkill.class
 com\michael\mmorpg\listeners\TurretListener.class
+com\michael\mmorpg\skills\frostmage\IceBarrageSkill.class
 com\michael\mmorpg\dungeon\CountdownTask$1.class
 com\michael\mmorpg\skills\hunter\DismissPetSkill.class
 com\michael\mmorpg\skills\guardian\BannerOfProtectionSkill$1.class
+com\michael\mmorpg\skills\windwaker\UpdraftSkill$2.class
 com\michael\mmorpg\listeners\NetherShotListener.class
 com\michael\mmorpg\skills\renegade\DragonKickSkill$3.class
 com\michael\mmorpg\managers\BankManager$BankTier.class
@@ -399,6 +426,7 @@ com\michael\mmorpg\skills\chronomancer\EraserBeamSkill.class
 com\michael\mmorpg\skills\guardian\RamSkill.class
 com\michael\mmorpg\skills\bard\SwiftAnthemSkill.class
 com\michael\mmorpg\MinecraftMMORPG.class
+com\michael\mmorpg\skills\darkblade\SoulSiphonSkill.class
 com\michael\mmorpg\skills\renegade\ResonatingStrikeSkill.class
 com\michael\mmorpg\models\classes\Engineer.class
 com\michael\mmorpg\skills\ninja\VanishSkill.class
@@ -429,6 +457,7 @@ com\michael\mmorpg\dungeon\DungeonCreateCommand.class
 com\michael\mmorpg\listeners\AbsorptionItemListener$1.class
 com\michael\mmorpg\skills\arcanist\ArcaneMissilesSkill$3$1.class
 com\michael\mmorpg\managers\CustomPotionManager$ResourceType.class
+com\michael\mmorpg\skills\frostmage\IceBarrageSkill$3.class
 com\michael\mmorpg\skills\toxicologist\ToxinTransfusionSkill.class
 com\michael\mmorpg\managers\PartyManager.class
 com\michael\mmorpg\managers\CastingBarManager.class
@@ -439,11 +468,13 @@ com\michael\mmorpg\skills\elementalranger\GrandTreeSkill$1.class
 com\michael\mmorpg\skills\bard\HealingHymnSkill.class
 com\michael\mmorpg\skills\engineer\GearwingPhysicianSkill$1.class
 com\michael\mmorpg\commands\MaxLevelCommand.class
+com\michael\mmorpg\commands\RandomTeleportCommand.class
 com\michael\mmorpg\commands\SkillCommand.class
 com\michael\mmorpg\skills\guardian\UnbreakableSkill$1.class
 com\michael\mmorpg\skills\bandolier\RollLeftSkill$1.class
 com\michael\mmorpg\listeners\ElementalArrowListener$1.class
 com\michael\mmorpg\skills\buccaneer\PlunderSkill.class
+com\michael\mmorpg\graveyard\GraveyardManager.class
 com\michael\mmorpg\skills\elementalranger\TsunamiCallSkill.class
 com\michael\mmorpg\skills\berserker\ThrowingAxeSkill.class
 com\michael\mmorpg\status\StatusEffect$2.class
@@ -471,6 +502,7 @@ com\michael\mmorpg\listeners\EnderArrowListener.class
 com\michael\mmorpg\managers\ResourceManager.class
 com\michael\mmorpg\skills\healer\HealSkill.class
 com\michael\mmorpg\skills\engineer\MegaCannonSkill.class
+com\michael\mmorpg\skills\windwaker\UpdraftSkill.class
 com\michael\mmorpg\skills\hunter\DisengageSkill.class
 com\michael\mmorpg\skills\windwaker\WindWallSkill.class
 com\michael\mmorpg\skills\engineer\ProximityMineSkill$1.class
@@ -513,6 +545,7 @@ com\michael\mmorpg\skills\bard\WarChantSkill$2.class
 com\michael\mmorpg\skills\ninja\KickSkill$1.class
 com\michael\mmorpg\skills\ninja\KickSkill.class
 com\michael\mmorpg\managers\ClassManager$PendingClassChange.class
+com\michael\mmorpg\graveyard\Graveyard.class
 com\michael\mmorpg\listeners\AbsorptionItemListener$2.class
 com\michael\mmorpg\skills\priest\CondemnationSkill$1.class
 com\michael\mmorpg\commands\CoinsCommand.class

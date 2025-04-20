@@ -1,12 +1,10 @@
 package com.michael.mmorpg.managers;
 
 import com.michael.mmorpg.MinecraftMMORPG;
-import com.michael.mmorpg.models.PlayerData;
-import org.bukkit.entity.Player;
 import org.bukkit.entity.LivingEntity;
-import org.bukkit.event.entity.EntityDamageByEntityEvent;
-import org.bukkit.inventory.ItemStack;
+import org.bukkit.entity.Player;
 import org.bukkit.scheduler.BukkitRunnable;
+
 import java.util.*;
 
 public class CombatManager {
@@ -39,6 +37,7 @@ public class CombatManager {
         if (!wasInCombat) {
             player.sendMessage("§c§l⚔ You have entered combat!");
         }
+
     }
 
     public void exitCombat(Player player) {
@@ -173,4 +172,6 @@ public class CombatManager {
             }
         }.runTaskTimer(plugin, 20L, 20L);
     }
+
+
 }

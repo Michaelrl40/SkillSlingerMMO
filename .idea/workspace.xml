@@ -5,8 +5,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6cb5b92a-dbf8-4c77-890e-1361fb06c1d3" name="Changes" comment="!.21 update">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/michael/mmorpg/commands/RandomTeleportCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/michael/mmorpg/guild/Guild.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/michael/mmorpg/guild/GuildCommand.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/michael/mmorpg/guild/GuildHall.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/michael/mmorpg/guild/GuildListener.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/michael/mmorpg/guild/GuildManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/michael/mmorpg/MinecraftMMORPG.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/michael/mmorpg/MinecraftMMORPG.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/michael/mmorpg/managers/CombatManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/michael/mmorpg/managers/CombatManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/michael/mmorpg/managers/DatabaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/michael/mmorpg/managers/DatabaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/michael/mmorpg/MinecraftMMORPG.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/michael/mmorpg/MinecraftMMORPG.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/michael/mmorpg/managers/CombatManager$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/michael/mmorpg/managers/CombatManager$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/michael/mmorpg/managers/CombatManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/michael/mmorpg/managers/CombatManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/michael/mmorpg/managers/DatabaseManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/michael/mmorpg/managers/DatabaseManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/plugin.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/plugin.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/original-skillslinger-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/original-skillslinger-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/skillslinger-1.0-SNAPSHOT-shaded.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/skillslinger-1.0-SNAPSHOT-shaded.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/skillslinger-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/skillslinger-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,12 +73,12 @@
     &quot;assignee&quot;: &quot;Michaelrl40&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/Michaelrl40/SkillSlingerSMP.git",
-    "accountId": "ea4610e8-d7ca-47ec-877a-33b12365b1e9"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/Michaelrl40/SkillSlingerMMO&quot;,
+    &quot;accountId&quot;: &quot;ea4610e8-d7ca-47ec-877a-33b12365b1e9&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -71,31 +92,31 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Maven.skillslinger [clean].executor": "Run",
-    "Maven.skillslinger [compile].executor": "Run",
-    "Maven.skillslinger [install].executor": "Run",
-    "Maven.skillslinger [package].executor": "Run",
-    "Maven.skillslinger [test].executor": "Run",
-    "Maven.skillslinger [verify].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Micha/OneDrive/Desktop/SkillSlinger/src/main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propVCSSupport.DirectoryMappings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Maven.skillslinger [clean].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.skillslinger [compile].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.skillslinger [install].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.skillslinger [package].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.skillslinger [test].executor&quot;: &quot;Run&quot;,
+    &quot;Maven.skillslinger [verify].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Micha/OneDrive/Desktop/SkillSlinger/src/main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propVCSSupport.DirectoryMappings&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Micha\OneDrive\Desktop\SkillSlinger\libs" />
@@ -173,7 +194,8 @@
       <workItem from="1745010277986" duration="157000" />
       <workItem from="1745014292756" duration="646000" />
       <workItem from="1745014950465" duration="142000" />
-      <workItem from="1745015101762" duration="1565000" />
+      <workItem from="1745015101762" duration="19777000" />
+      <workItem from="1745111589558" duration="692000" />
     </task>
     <task id="LOCAL-00001" summary="New updates">
       <option name="closed" value="true" />

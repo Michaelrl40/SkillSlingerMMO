@@ -12,6 +12,8 @@ import com.michael.mmorpg.graveyard.GraveyardCommand;
 import com.michael.mmorpg.graveyard.GraveyardListener;
 import com.michael.mmorpg.graveyard.GraveyardManager;
 import com.michael.mmorpg.graveyard.WorldLoadListener;
+import com.michael.mmorpg.guild.GuildCommand;
+import com.michael.mmorpg.guild.GuildManager;
 import com.michael.mmorpg.handlers.ShieldHandler;
 import com.michael.mmorpg.listeners.*;
 import com.michael.mmorpg.managers.*;
@@ -74,6 +76,10 @@ public class MinecraftMMORPG extends JavaPlugin {
     private TitleManager titleManager;
     private DungeonManager dungeonManager;
     private DungeonKey dungeonKeyManager;
+    private GuildManager guildManager;
+
+
+
 
 
 
@@ -106,6 +112,7 @@ public class MinecraftMMORPG extends JavaPlugin {
         }
 
         databaseManager = new DatabaseManager(this);
+
 
         // Initialize configurations
         saveDefaultConfig();
@@ -152,14 +159,15 @@ public class MinecraftMMORPG extends JavaPlugin {
         titleManager = new TitleManager(this);
         dungeonManager = new DungeonManager(this);
         dungeonKeyManager = new DungeonKey(this);
+        guildManager = new GuildManager(this);
+
+
 
 
 
 
         Skill.setPlugin(this);
         graveyardManager.ensureDefaultGraveyard();
-
-
 
 
         // Register PlaceholderAPI expansion (do this AFTER initializing managers)
@@ -169,6 +177,7 @@ public class MinecraftMMORPG extends JavaPlugin {
                 new com.michael.mmorpg.PlaceHolder.MMORPGPlaceholders(this).register();
             }
         }, 40L); // Wait 2 seconds (40 ticks) after server start to register
+
 
 
 
@@ -219,6 +228,9 @@ public class MinecraftMMORPG extends JavaPlugin {
         getServer().getPluginManager().registerEvents(new DungeonKeyListener(this), this);
         getServer().getPluginManager().registerEvents(new WorldLoadListener(this), this);
 
+
+
+
         // Register commands
         getCommand("class").setExecutor(new ClassCommand(this));
         getCommand("skill").setExecutor(new SkillCommand(this));
@@ -245,6 +257,11 @@ public class MinecraftMMORPG extends JavaPlugin {
         getCommand("dungeonentrance").setExecutor(new DungeonEntranceCommand(this));
         getCommand("dungeonkey").setExecutor(new DungeonKeyCommand(this));
         getCommand("dungeonmaxtime").setExecutor(new DungeonMaxTimeCommand(this));
+        getCommand("guild").setExecutor(new GuildCommand(this, guildManager));
+        getCommand("randomtp").setExecutor(new RandomTeleportCommand(this));
+
+
+
 
         startAutoSave();
     }
@@ -383,6 +400,15 @@ public class MinecraftMMORPG extends JavaPlugin {
     public DungeonManager getDungeonManager() {
         return dungeonManager;
     }
+
+    public GuildManager getGuildManager() {
+        return guildManager;
+    }
+
+
+
+
+
 
 
     @Override

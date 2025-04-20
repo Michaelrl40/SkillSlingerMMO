@@ -3,8 +3,8 @@ version: 1.0-SNAPSHOT
 main: com.michael.mmorpg.MinecraftMMORPG
 api-version: 1.21.4
 description: MMORPG plugin with class system
-depend: [ProtocolLib, LibsDisguises, ItemsAdder, WorldGuard, PlaceholderAPI]
-softdepend: [DiscordSRV, Parties]
+depend: [ProtocolLib, LibsDisguises, ItemsAdder, WorldGuard, PlaceholderAPI, MythicMobs]
+softdepend: [DiscordSRV]
 
 permissions:
   skillslinger.coins.admin:
@@ -15,9 +15,6 @@ permissions:
     default: op
   skillslinger.guild.admin:
     description: Allows access to administrative guild commands
-    default: op
-  mmorpg.npc:
-    description: Allows managing combat training NPCs
     default: op
   skillslinger.bank.admin:
     description: Allows administrative control over bank accounts
@@ -34,6 +31,12 @@ permissions:
   skillslinger.bind:
     description: Allows binding skills to items
     default: true
+  skillslinger.guild:
+    description: Allows using guild commands
+    default: true
+  mmorpg.randomtp:
+    description: Allows use of the random teleport command
+    default: op
 
 commands:
   class:
@@ -130,5 +133,21 @@ commands:
     description: Set the maximum time limit for a dungeon
     usage: /dungeonmaxtime [dungeon name] [time in seconds]
     permission: mmorpg.dungeon.maxtime
+  guild:
+    description: Guild management commands
+    usage: /guild <create|invite|accept|leave|kick|promote|demote|info|list|members|disband|hall>
+    aliases: [ g ]
+    permission: skillslinger.guild
+  mount:
+    description: Mount management commands
+    usage: /mount <summon|dismount|list|help>
+    aliases: [ m, mounts ]
+    permission: skillslinger.mount.use
+  randomtp:
+    description: Teleports you to a random location in the world
+    usage: /<command>
+    aliases: [ rtp, randomteleport, wild ]
+    permission: mmorpg.randomtp
+
 
 

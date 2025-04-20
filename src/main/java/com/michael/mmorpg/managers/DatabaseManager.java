@@ -3,6 +3,7 @@ package com.michael.mmorpg.managers;
 import com.michael.mmorpg.MinecraftMMORPG;
 import com.michael.mmorpg.models.GameClass;
 import com.michael.mmorpg.models.PlayerData;
+
 import java.io.File;
 import java.sql.*;
 import java.util.Map;
@@ -417,7 +418,7 @@ public class DatabaseManager {
 
             stmt = conn.createStatement();
 
-            // Create land_claims table with fixed schema (added missing comma)
+            // Create land_claims table
             stmt.execute(
                     "CREATE TABLE IF NOT EXISTS land_claims (" +
                             "claim_id TEXT PRIMARY KEY, " +
@@ -428,7 +429,7 @@ public class DatabaseManager {
                             "chunk_z INTEGER NOT NULL, " +
                             "radius INTEGER NOT NULL, " +
                             "creation_date INTEGER NOT NULL, " +
-                            "allowed_players TEXT, " +  // Fixed missing comma here
+                            "allowed_players TEXT, " +
                             "guild_build_permissions TEXT" +
                             ")"
             );
@@ -441,6 +442,7 @@ public class DatabaseManager {
             closeQuietly(stmt);
         }
     }
+
 
     public void initGraveyardTables() {
         Connection conn = null;

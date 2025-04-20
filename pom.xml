@@ -44,6 +44,12 @@
             <id>sk89q-repo</id>
             <url>https://maven.enginehub.org/repo/</url>
         </repository>
+        <repository>
+            <id>nexus</id>
+            <name>Lumine Releases</name>
+            <url>https://mvn.lumine.io/repository/maven-public/</url>
+        </repository>
+
     </repositories>
     <dependencies>
         <!-- Keeping your existing dependencies -->
@@ -51,12 +57,6 @@
             <groupId>me.clip</groupId>
             <artifactId>placeholderapi</artifactId>
             <version>2.11.3</version>
-            <scope>provided</scope>
-        </dependency>
-        <dependency>
-            <groupId>com.alessiodp.parties</groupId>
-            <artifactId>parties-api</artifactId>
-            <version>3.2.16</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
@@ -96,6 +96,13 @@
             <version>10.0.44</version>
             <scope>provided</scope>
         </dependency>
+        <dependency>
+            <groupId>io.lumine</groupId>
+            <artifactId>Mythic-Dist</artifactId>
+            <version>5.6.1</version>
+            <scope>provided</scope>
+        </dependency>
+
     </dependencies>
 
     <!-- Keeping your existing build configuration -->

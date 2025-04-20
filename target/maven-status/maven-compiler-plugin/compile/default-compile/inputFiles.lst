@@ -4,6 +4,7 @@ C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\sk
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\skills\hunter\FootTrapSkill.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\models\classes\Charmer.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\skills\skyknight\SpiralPierceSkill.java
+C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\commands\RandomTeleportCommand.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\dungeon\DungeonKey.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\skills\unused\CrushingWaveSkill.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\listeners\EconomyInventoryListener.java
@@ -16,6 +17,7 @@ C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\sk
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\listeners\OverclockedWeaponListener.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\listeners\SoulWardListener.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\skills\elementalranger\NetherShotSkill.java
+C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\guild\GuildHall.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\models\classes\Guardian.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\skills\frostmage\IceBlockSkill.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\managers\AbsorptionShieldManager.java
@@ -136,6 +138,7 @@ C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\sk
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\skills\priest\MendSkill.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\models\classes\Priest.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\skills\berserker\GutsSkill.java
+C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\guild\Guild.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\skills\bard\LullabySkill.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\models\classes\WindWaker.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\skills\druid\RegrowthSkill.java
@@ -175,6 +178,7 @@ C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\sk
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\skills\chronomancer\TimeGlitchSkill.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\skills\berserker\WhirlwindSkill.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\deathchest\DeathChestManager.java
+C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\guild\GuildManager.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\models\classes\Berserker.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\managers\ClassManager.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\skills\ninja\KickSkill.java
@@ -196,6 +200,7 @@ C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\sk
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\skills\healer\HealSkill.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\handlers\ShieldHandler.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\skills\hunter\DismissPetSkill.java
+C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\guild\GuildCommand.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\listeners\NetherShotListener.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\skills\bard\ResonantShieldSkill.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\skills\ninja\SmokeBombSkill.java
@@ -289,6 +294,7 @@ C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\sk
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\skills\hunter\AimedShotSkill.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\skills\mage\WeakFireballSkill.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\skills\bard\HealingHymnSkill.java
+C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\guild\GuildListener.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\commands\ClearHologramsCommand.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\managers\AuctionHouseManager.java
 C:\Users\Micha\OneDrive\Desktop\SkillSlinger\src\main\java\com\michael\mmorpg\listeners\TsunamiCallListener.java
