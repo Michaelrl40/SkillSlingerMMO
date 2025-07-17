@@ -43,7 +43,7 @@ public class GameClass {
 
     // Configurable level ranges with default values
     private static int BASE_MIN_LEVEL = 1;
-    private static int BASE_MAX_LEVEL = 1;
+    private static int BASE_MAX_LEVEL = 1000;
     private static int SECONDARY_MIN_LEVEL = 1;
     private static int SECONDARY_MAX_LEVEL = 10;
     private static int MASTER_MIN_LEVEL = 1;
