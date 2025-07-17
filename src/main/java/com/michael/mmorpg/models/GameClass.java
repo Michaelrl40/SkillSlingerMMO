@@ -64,19 +64,19 @@ public class GameClass {
             ConfigurationSection baseConfig = tiers.getConfigurationSection("base");
             if (baseConfig != null) {
                 BASE_MIN_LEVEL = baseConfig.getInt("min-level", 1);
-                BASE_MAX_LEVEL = baseConfig.getInt("max-level", 20);
+                BASE_MAX_LEVEL = baseConfig.getInt("max-level", 1);
             }
 
             ConfigurationSection secondaryConfig = tiers.getConfigurationSection("secondary");
             if (secondaryConfig != null) {
-                SECONDARY_MIN_LEVEL = secondaryConfig.getInt("min-level", 20);
-                SECONDARY_MAX_LEVEL = secondaryConfig.getInt("max-level", 50);
+                SECONDARY_MIN_LEVEL = secondaryConfig.getInt("min-level", 1);
+                SECONDARY_MAX_LEVEL = secondaryConfig.getInt("max-level", 20);
             }
 
             ConfigurationSection masterConfig = tiers.getConfigurationSection("master");
             if (masterConfig != null) {
-                MASTER_MIN_LEVEL = masterConfig.getInt("min-level", 50);
-                MASTER_MAX_LEVEL = masterConfig.getInt("max-level", 70);
+                MASTER_MIN_LEVEL = masterConfig.getInt("min-level", 1);
+                MASTER_MAX_LEVEL = masterConfig.getInt("max-level", 50);
             }
         }
     }
